@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fast-dw"
+version = "0.1.0"
+description = "A fast way to deploy a data warehouse, using dbt and other tools"
+authors = ["João Tedeschi"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fast_dw"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dbt-core = "^1.6.3"
+dbt-bigquery = "^1.6.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
