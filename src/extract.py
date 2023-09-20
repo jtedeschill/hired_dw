@@ -17,7 +17,7 @@ cwd = Path.cwd()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def load_ingestions_config(cwd : Path):
-    with open(cwd / 'src/ingestions/params.yaml', 'r') as file:
+    with open(cwd / 'src/ingestions/params.yml', 'r') as file:
         ingestions_config = yaml.safe_load(file)
     return ingestions_config
 
@@ -30,7 +30,6 @@ def generate_fake_data(num_records):
             'name': faker.name(),
             'address': faker.address(),
             'email': faker.email(),
-            'profile': faker.profile(),
             'phone_number': faker.phone_number(),
             'job': faker.job(),
             'company': faker.company(),
@@ -56,9 +55,15 @@ if __name__ == '__main__':
     ingestions = load_ingestions_config(cwd)
 
     for ingestion in ingestions:
-        num_records = 1000000
-        logging.info(f'Ingestion: {ingestion}')
-        logging.info(f'Generating {ingestion["num_records"]} fake records')
+        num_records = 1000
+        print(ingestion)
+        logging.info(f'Ingestion: {ingestion["name"]}')
+        logging.info(f'Generating {num_records} fake records')
         dataframe = generate_fake_data(num_records=num_records)
-        upload_to_bq(dataframe, table_name=ingestion['bigquerytable'], project_id=ingestion['googleprojectid'], dataset_id=ingestion['bigquerdataset'], method='append')
-
+        upload_to_bq(
+            dataframe=dataframe, 
+            table_name=ingestion['bigquerytable'], 
+            project_id=ingestion['googleprojectid'], 
+            dataset_id=ingestion['bigquerydataset'], 
+            method='append'
+            )
