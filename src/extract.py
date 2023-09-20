@@ -7,15 +7,17 @@ from google.cloud import storage
 from google.cloud import bigquery
 from google.oauth2 import service_account
 import os
+from pathlib import Path
 
 credentials = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 # generate fake data
 
+cwd = Path.cwd()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def load_ingestions_config():
-    with open('ingestions/params.yaml', 'r') as file:
+def load_ingestions_config(cwd : Path):
+    with open(cwd / 'ingestions/params.yaml', 'r') as file:
         ingestions_config = yaml.safe_load(file)
     return ingestions_config
 
@@ -51,7 +53,7 @@ def upload_to_bq(dataframe, table_name, project_id, dataset_id, method = 'append
 
 if __name__ == '__main__':
 
-    ingestions = load_ingestions_config()
+    ingestions = load_ingestions_config(cwd)
 
     for ingestion in ingestions:
         num_records = 1000000
