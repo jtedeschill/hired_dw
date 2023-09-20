@@ -3,8 +3,8 @@ on:
     push:
         branches: [main]
 jobs:
-    run-pipeline:
-        name: Run Pipeline
+    test:
+        name: Test GCloud Integration
         runs-on: ubuntu-latest
         permissions:
             id-token: write
