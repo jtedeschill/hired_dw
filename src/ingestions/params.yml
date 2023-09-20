@@ -1,0 +1,4 @@
+ingestion-name: "raw_fake_data"
+  - googleprojectid: "dbtlab-371120"
+  - bigquerydataset: "sample"
+  - bigquerytable: "raw_fake_data"
