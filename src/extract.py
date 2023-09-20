@@ -6,13 +6,11 @@ import yaml
 from google.cloud import storage
 from google.cloud import bigquery
 from google.oauth2 import service_account
+import os
 
+credentials = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 # generate fake data
 
-credentials = service_account.Credentials.from_service_account_file(
-    'gcloud_credentials.json',
-    scopes=["https://www.googleapis.com/auth/cloud-platform"],
-)
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
