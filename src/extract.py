@@ -12,6 +12,7 @@ from pathlib import Path
 credentials = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 # generate fake data
 
+print(credentials)
 cwd = Path.cwd()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
