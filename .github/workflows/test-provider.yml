@@ -1,8 +1,7 @@
-name: Run Data Pipelines in GBQ
+name: Test GCloud Connection
 on:
-    schedule:
-        # everyday at 5:00 AM
-        - cron: '0 5 * * *'
+    push:
+        branches: [main]
 jobs:
     run-pipeline:
         name: Run Pipeline
@@ -36,7 +35,3 @@ jobs:
             - name: 'gcloud test'
               run: |-
                 gcloud services list
-
-            - name: Run pipeline
-              run: |
-                    python src/extract.py
