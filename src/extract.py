@@ -56,7 +56,6 @@ if __name__ == '__main__':
 
     for ingestion in ingestions:
         num_records = 1000
-        print(ingestion)
         logging.info(f'Ingestion: {ingestion["name"]}')
         logging.info(f'Generating {num_records} fake records')
         dataframe = generate_fake_data(num_records=num_records)
