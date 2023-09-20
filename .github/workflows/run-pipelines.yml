@@ -36,8 +36,7 @@ jobs:
 
             - name: List BigQuery tables
               run: |
-                    gcloud auth login
-                    bq ls --project_id dbtlab-371120 --dataset_id sample
+                    bq ls --dataset_id sample
 
             - name: Run pipeline
               run: |
