@@ -65,5 +65,5 @@ if __name__ == '__main__':
             table_name=ingestion['bigquerytable'], 
             project_id=ingestion['googleprojectid'], 
             dataset_id=ingestion['bigquerydataset'], 
-            method='append'
+            method='replace'
             )
