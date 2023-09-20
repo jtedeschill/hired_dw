@@ -29,6 +29,7 @@ jobs:
                 workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
                 service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
                 create_credentials_file: true
+                access_token_lifetime: '300s'
             - name: Run pipeline
               run: |
                     python src/extract.py
