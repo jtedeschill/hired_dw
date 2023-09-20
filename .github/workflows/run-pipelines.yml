@@ -1,5 +1,7 @@
 name: Run Data Pipelines in GBQ
 on:
+    push:
+        branches: [main]
     schedule:
         # everyday at 5:00 AM
         - cron: '0 5 * * *'
