@@ -31,7 +31,7 @@ jobs:
                 create_credentials_file: true
                 access_token_lifetime: '300s'
                 token_format: 'id_token'
-                id_token_audience: 'https://iam.googleapis.com/projects/536240501365/locations/global/workloadIdentityPools/github-actions/providers/github-actions'
+                id_token_audience: 'projects/536240501365/locations/global/workloadIdentityPools/github-actions/providers/github-actions'
             - name: Run pipeline
               run: |
                     python src/extract.py
