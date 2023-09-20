@@ -17,7 +17,7 @@ cwd = Path.cwd()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def load_ingestions_config(cwd : Path):
-    with open(cwd / 'ingestions/params.yaml', 'r') as file:
+    with open(cwd / 'src/ingestions/params.yaml', 'r') as file:
         ingestions_config = yaml.safe_load(file)
     return ingestions_config
 
