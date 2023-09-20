@@ -30,6 +30,10 @@ jobs:
                 service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
                 create_credentials_file: true
                 access_token_lifetime: '300s'
+                
+            - name: Set up gcloud Cloud SDK environment
+              uses: google-github-actions/setup-gcloud@v1.1.1
+            
             - name: Run pipeline
               run: |
                     python src/extract.py
