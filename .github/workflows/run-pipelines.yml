@@ -9,6 +9,10 @@ jobs:
     run-pipeline:
         name: Run Pipeline
         runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: read
+            packages: read
         steps:
             - uses: actions/checkout@v4
             - name: Set up Python 3.10
