@@ -14,6 +14,7 @@ from etl.transformers import PandasTransformer
 from etl.loaders import PandasGbqLoader, GcsLoader
 
 
+logging.basicConfig(level=logging.INFO)
 
 
 
