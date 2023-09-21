@@ -3,8 +3,8 @@
   class: "ETL"
   extractor: 
     class: "SalesforceExtractor"
-    params: 
-      soql_query: """
+    params:
+      soql_query: >
                   SELECT
                     Id,
                     CreatedDate,
@@ -24,7 +24,6 @@
                     dfox__Stage__c,
                     website
                   FROM ACCOUNT
-                  """
   transformer:
     class: "SFTransformer"
     schema:

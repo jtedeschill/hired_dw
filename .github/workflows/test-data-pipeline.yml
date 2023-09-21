@@ -39,4 +39,4 @@ jobs:
 
             - name: Run pipeline
               run: |
-                    python src/pipelines/salesforce.py
+                    python src/salesforce.py

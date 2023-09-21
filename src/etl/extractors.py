@@ -47,7 +47,7 @@ class FakeDataExtractor(Extractor):
         return dataframe
 
 @register_class  
-def SalesforceExtractor(Extractor):
+class SalesforceExtractor(Extractor):
     """ Extract data from Salesforce """
     def __init__(self):
         user = os.environ.get('SF_USER')
