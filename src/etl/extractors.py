@@ -59,7 +59,7 @@ class SalesforceExtractor(Extractor):
         password = os.environ.get('SF_PASSWORD')
         token = os.environ.get('SF_TOKEN')
         self.sf = Salesforce(username=user, password=password, security_token=token, version='52.0')
-        logging.info(f'Connected to Salesforce as {self.user}')
+        logging.info(f'Connected to Salesforce as {user}')
         logging.info(f'Extracting data from Salesforce using query: {soql_query}')
         records = self.sf.query_all(soql_query)['records']
         logging.info(f'Extracted {len(records)} records from Salesforce')
