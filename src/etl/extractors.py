@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 import os
 from pathlib import Path
 from abc import ABC, abstractmethod
-from etl import register_class
+from registry import register_class
 
 class Extractor(ABC):
     @abstractmethod

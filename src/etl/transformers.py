@@ -5,7 +5,7 @@ import yaml
 from google.cloud import storage
 from google.cloud import bigquery
 from google.oauth2 import service_account
-from etl import register_class
+from registry import register_class
 
 class Transformer(ABC):
     @abstractmethod

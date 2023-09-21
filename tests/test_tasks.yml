@@ -9,6 +9,6 @@
     class: "PandasGbqLoader"
     params: 
       table_name: "raw_mock_data"
-      dataset_name: "sample"
+      dataset_id: "sample"
       project_id: "dbtlab-371120"
       if_exists: "replace"

@@ -7,7 +7,7 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 import os
 from pathlib import Path
-from etl import register_class
+from registry import register_class
 
 
 class Loader(ABC):
@@ -21,17 +21,17 @@ class PandasGbqLoader(Loader):
     def __init__(self):
         pass
 
-    def load(self, dataframe, dataset_id, table_name, project_id, method):
+    def load(self, dataframe, dataset_id, table_name, project_id, if_exists):
         self.dataframe = dataframe
         self.dataset_id = dataset_id
         self.table_name = table_name
         self.project_id = project_id
-        self.method = method
+        self.if_exists = if_exists
 
         logging.info(f'Loading {len(self.dataframe)} records to table {self.table_name} in BigQuery')
         self.dataframe.to_gbq(f'{self.dataset_id}.{self.table_name}', 
             project_id = self.project_id,
-            if_exists = self.method,
+            if_exists = self.if_exists,
             credentials = service_account.Credentials.from_service_account_file(os.environ.get('GOOGLE_APPLICATION_CREDENTIALS'))
         )
 @register_class
