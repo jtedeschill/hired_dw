@@ -67,7 +67,7 @@ class SFTransformer(Transformer):
         """
         self.dataframe = dataframe
         logging.info(f'Transforming {len(self.dataframe)} records')
-        schema = json.load(Path(schema)) if schema else None
+        schema = json.load(schema) if schema else None
 
         if schema:
             # drop columns that are not in the schema
