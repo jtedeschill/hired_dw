@@ -31,8 +31,7 @@ class PandasGbqLoader(Loader):
         logging.info(f'Loading {len(self.dataframe)} records to table {self.table_name} in BigQuery')
         self.dataframe.to_gbq(f'{self.dataset_id}.{self.table_name}', 
             project_id = self.project_id,
-            if_exists = self.if_exists,
-            credentials = service_account.Credentials.from_service_account_file(os.environ.get('GOOGLE_APPLICATION_CREDENTIALS'))
+            if_exists = self.if_exists
         )
 @register_class
 class GcsLoader(Loader):
