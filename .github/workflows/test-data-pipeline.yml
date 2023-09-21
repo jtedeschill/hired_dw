@@ -1,8 +1,8 @@
-name: Run Data Pipelines in GBQ
+name: Data Pipeline Test
 on:
-    schedule:
-        # everyday at 5:00 AM
-        - cron: '0 5 * * *'
+    push:
+        branches:
+            - main
 jobs:
     run-pipeline:
         name: Run Pipeline
@@ -39,4 +39,4 @@ jobs:
 
             - name: Run pipeline
               run: |
-                    python src/main.py
+                    python tests/load_test.py
