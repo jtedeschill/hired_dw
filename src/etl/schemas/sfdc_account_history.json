@@ -1,0 +1,8 @@
+{
+    "Id": ["string", "account_history_id"],
+    "AccountId": ["string", "account_id"],
+    "CreatedDate": ["date", "account_history_created_date"],
+    "Field": ["string", "account_history_field"],
+    "OldValue": ["string", "account_history_old_value"],
+    "NewValue": ["string", "account_history_new_value"]
+}

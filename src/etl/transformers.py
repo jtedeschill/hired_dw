@@ -32,7 +32,7 @@ class SFTransformer(Transformer):
     def __init__(self):
         pass
 
-    def transform(self, dataframe, schema: dict|None = None, remove_suffix=True, lowercase=True):
+    def transform(self, dataframe, schema: str|None = None, remove_suffix=True, lowercase=True):
         """ Transform a dataframe from Salesforce 
         To apply a schema, pass a path with a json with the following format:
         ```
@@ -67,7 +67,12 @@ class SFTransformer(Transformer):
         """
         self.dataframe = dataframe
         logging.info(f'Transforming {len(self.dataframe)} records')
-        schema = json.load(schema) if schema else None
+
+        if schema:
+            with open(Path(schema)) as f:
+                schema = json.loads(f.read())
+        else:
+            schema = None
 
         if schema:
             # drop columns that are not in the schema
