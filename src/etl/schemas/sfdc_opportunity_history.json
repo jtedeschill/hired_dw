@@ -1,0 +1,30 @@
+{
+    "Id": [
+        "string",
+        "opp_history_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "opp_history_created_date"
+    ],
+    "CreatedById": [
+        "string",
+        "created_by_id"
+    ],
+    "Field": [
+        "string",
+        "opp_history_field"
+    ],
+    "NewValue": [
+        "string",
+        "opp_history_new_value"
+    ],
+    "OldValue": [
+        "string",
+        "opp_history_old_value"
+    ],
+    "OpportunityId": [
+        "string",
+        "opportunity_id"
+    ]
+}

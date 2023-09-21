@@ -54,3 +54,41 @@
       dataset_id: "Hired"
       project_id: "hired-393411"
       if_exists: "replace"
+
+- task:
+  name: "sfdc_opportunity_history"
+  class: "ETL"
+  extractor: 
+    class: "SalesforceExtractor"
+    params:
+      soql_query: "./src/etl/queries/sfdc_opportunity_history.sql"
+  transformer:
+    class: "SFTransformer"
+    params:
+      schema: "./src/etl/schemas/sfdc_opportunity_history.json"
+  loader:
+    class: "PandasGbqLoader"
+    params:
+      table_name: "sfdc_opportunity_history"
+      dataset_id: "Hired"
+      project_id: "hired-393411"
+      if_exists: "replace"
+
+- task:
+  name: "sfdc_contact"
+  class: "ETL"
+  extractor: 
+    class: "SalesforceExtractor"
+    params:
+      soql_query: "./src/etl/queries/sfdc_contact.sql"
+  transformer:
+    class: "SFTransformer"
+    params:
+      schema: "./src/etl/schemas/sfdc_contact.json"
+  loader:
+    class: "PandasGbqLoader"
+    params:
+      table_name: "sfdc_contact"
+      dataset_id: "Hired"
+      project_id: "hired-393411"
+      if_exists: "replace"

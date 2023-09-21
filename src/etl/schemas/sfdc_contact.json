@@ -1,0 +1,62 @@
+{
+    "Id": [
+        "string",
+        "contact_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "contact_created_date"
+    ],
+    "Account_Id": [
+        "string",
+        "account_id"
+    ],
+    "RecordType": [
+        "string",
+        "record_type"
+    ],
+    "FirstName": [
+        "string",
+        "contact_first_name"
+    ],
+    "LastName": [
+        "string",
+        "contact_last_name"
+    ],
+    "Owner_Name": [
+        "string",
+        "contact_owner_name"
+    ],
+    "Owner_UserRole_Name": [
+        "string",
+        "contact_owner_role"
+    ],
+    "Email": [
+        "string",
+        "email"
+    ],
+    "Job_Function__c": [
+        "string",
+        "job_function"
+    ],
+    "Job_Level__c": [
+        "string",
+        "job_level"
+    ],
+    "Title": [
+        "string",
+        "title"
+    ],
+    "Last_Activity_Date__c": [
+        "date",
+        "contact_last_activity_date"
+    ],
+    "Disqualified_Reasons__c": [
+        "string",
+        "contact_disqualified_reason"
+    ],
+    "FCRM__FCR_Status__c": [
+        "string",
+        "contact_status"
+    ]
+}
