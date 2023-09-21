@@ -39,4 +39,4 @@ jobs:
 
             - name: Run pipeline
               run: |
-                    python tests/load_test.py
+                    python src/main.py
