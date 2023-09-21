@@ -19,7 +19,7 @@ This is an ETL (Extract, Transform, Load) project focused on Salesforce data. It
 graph LR
     A(Salesforce) -->|Extract| B(ETL Pipeline)
     B -->|Transform| C(Transformed Data)
-    B -->|Load| D(Google BigQuery)
+    C -->|Load| D(Google BigQuery)
 ```
 
 ## How to Use
