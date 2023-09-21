@@ -58,6 +58,10 @@ class SalesforceExtractor(Extractor):
         user = os.environ.get('SF_USER')
         password = os.environ.get('SF_PASSWORD')
         token = os.environ.get('SF_TOKEN')
+
+        # read soql query from file
+        with open(Path(soql_query)) as f:
+            soql_query = f.read()
         self.sf = Salesforce(username=user, password=password, security_token=token, version='52.0')
         logging.info(f'Connected to Salesforce as {user}')
         logging.info(f'Extracting data from Salesforce using query: {soql_query}')

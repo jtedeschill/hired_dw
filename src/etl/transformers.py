@@ -6,6 +6,8 @@ from google.cloud import storage
 from google.cloud import bigquery
 from google.oauth2 import service_account
 from registry import register_class
+import json
+from pathlib import Path
 
 class Transformer(ABC):
     @abstractmethod
@@ -32,7 +34,7 @@ class SFTransformer(Transformer):
 
     def transform(self, dataframe, schema: dict|None = None, remove_suffix=True, lowercase=True):
         """ Transform a dataframe from Salesforce 
-        To apply a schema, pass a dictionary with the following format:
+        To apply a schema, pass a path with a json with the following format:
         ```
         {'column_name': ('data_type','final column name')}
         ```
@@ -65,6 +67,7 @@ class SFTransformer(Transformer):
         """
         self.dataframe = dataframe
         logging.info(f'Transforming {len(self.dataframe)} records')
+        schema = json.loads(Path(schema)) if schema else None
 
         if schema:
             # drop columns that are not in the schema
