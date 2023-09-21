@@ -1,0 +1,54 @@
+{
+    "Id": [
+        "string",
+        "opportunity_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "opportunity_created_date"
+    ],
+    "Account_Id": [
+        "string",
+        "account_id"
+    ],
+    "ContactId": [
+        "string",
+        "contact_id"
+    ],
+    "Name": [
+        "string",
+        "opportunity_name"
+    ],
+    "Owner_Name": [
+        "string",
+        "owner_name"
+    ],
+    "Owner_UserRole_Name": [
+        "string",
+        "owner_role"
+    ],
+    "RecordType_Name": [
+        "string",
+        "opportunity_record_type"
+    ],
+    "Type": [
+        "string",
+        "opportunity_type"
+    ],
+    "StageName": [
+        "string",
+        "stage_name"
+    ],
+    "Last_Activity_Date__c": [
+        "date",
+        "opportunity_last_activity_date"
+    ],
+    "Won_ACV__c": [
+        "float64",
+        "won_acv"
+    ],
+    "SQL_Date__c": [
+        "date",
+        "sql_date"
+    ]
+}

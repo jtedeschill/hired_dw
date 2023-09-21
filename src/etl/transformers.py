@@ -81,10 +81,10 @@ class SFTransformer(Transformer):
             for column_name, (data_type, _) in schema.items():
                 # if it is a date, convert to datetime
                 if data_type == 'date':
-                    self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name])
+                    self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name].copy(), errors='coerce')
                 # otherwise, convert to the specified data type
                 else:
-                    self.dataframe[column_name] = self.dataframe[column_name].astype(data_type)
+                    self.dataframe[column_name] = self.dataframe[column_name].copy().astype(data_type)
             # apply column name conversions
             for column_name, (_, final_column_name) in schema.items():
                 self.dataframe = self.dataframe.rename(columns={column_name: final_column_name})
