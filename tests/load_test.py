@@ -5,8 +5,8 @@ from src.etl import execute_tasks
 
 class TestExecuteTasks(unittest.TestCase):
 
-    @patch("your_module.yaml.safe_load")  # Replace 'your_module' with the actual module where 'yaml' is imported
-    @patch("your_module.logging.info")  # Replace 'your_module' with the actual module where 'logging' is imported
+    @patch("yaml.safe_load")  # Replace 'your_module' with the actual module where 'yaml' is imported
+    @patch("logging.info")  # Replace 'your_module' with the actual module where 'logging' is imported
     @patch("your_module.load_registry")  # Replace 'your_module' with the actual module where 'load_registry' is defined
     def test_execute_tasks(self, mock_load_registry, mock_logging_info, mock_yaml_load):
 
