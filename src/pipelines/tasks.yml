@@ -1,0 +1,54 @@
+- task:
+  name: "sfdc_account"
+  class: "ETL"
+  extractor: 
+    class: "SalesforceExtractor"
+    params: 
+      soql_query: """
+                  SELECT
+                    Id,
+                    CreatedDate,
+                    Name,
+                    Account_Segment__c,
+                    Scraped_JD_Signal_Core_Tech__c,
+                    Last_Updated_Open_Roles__c,
+                    No_of_Open_Tech_Roles__c,
+                    Most_Recent_Service_Contract_End_Date__c,
+                    Owner.name,
+                    Last_Activity_Date__c,
+                    DF_Account_Score__c,
+                    Employee_Count__c,
+                    Employee_Count_Source__c,
+                    Account_HQ_Country__c,
+                    Type,
+                    dfox__Stage__c,
+                    website
+                  FROM ACCOUNT
+                  """
+  transformer:
+    class: "SFTransformer"
+    schema:
+      Id: ['string', 'account_id']
+      CreatedDate: ['date', 'account_created_date']
+      Name: ['string', 'account_name']
+      Account_Segment__c: ['string', 'account_segment']
+      Scraped_JD_Signal_Core_Tech__c: ['date', 'job_scraping_date']
+      Most_Recent_Service_Contract_End_Date__c: ['date', 'most_recent_contract_end_date']
+      Last_Activity_Date__c: ['date', 'account_last_activity_date']
+      Owner_Name: ['string', 'account_owner_name']
+      DF_Account_Score__c: ['float64', 'account_score']
+      Employee_Count__c: ['float64', 'employee_count']
+      Employee_Count_Source__c: ['string', 'employee_count_source']
+      Account_HQ_Country__c: ['string', 'account_hq_country']
+      Type: ['string', 'account_type']
+      dfox__Stage__c: ['string', 'account_df_stage']
+      Website: ['string', 'website']
+      No_of_Open_Tech_Roles__c: ['float64', 'no_open_tech_roles']
+      Last_Updated_Open_Roles__c: ['date', 'job_scraping_trial_date']
+  loader: 
+    class: "PandasGbqLoader"
+    params: 
+      table_name: "sfdc_account_TEST"
+      dataset_id: "Hired"
+      project_id: "hired-393411"
+      if_exists: "replace"

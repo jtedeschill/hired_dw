@@ -33,6 +33,8 @@ class PandasGbqLoader(Loader):
             project_id = self.project_id,
             if_exists = self.if_exists
         )
+        logging.info(f'Loaded {len(self.dataframe)} records to table {self.project_id}.{self.dataset_id}.{self.table_name} in BigQuery')
+
 @register_class
 class GcsLoader(Loader):
     """ Load files to GCS """

@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 from abc import ABC, abstractmethod
 from registry import register_class
+from simple_salesforce import Salesforce, SalesforceLogin, SFType
 
 class Extractor(ABC):
     @abstractmethod
@@ -48,10 +49,21 @@ class FakeDataExtractor(Extractor):
 @register_class  
 def SalesforceExtractor(Extractor):
     """ Extract data from Salesforce """
-    def __init__(self, user, password, token):
+    def __init__(self):
+        user = os.environ.get('SF_USER')
+        password = os.environ.get('SF_PASSWORD')
+        token = os.environ.get('SF_TOKEN')
         self.user = user
         self.password = password
         self.token = token
+        self.sf = Salesforce(username=self.user, password=self.password, security_token=self.token, version='52.0')
+        logging.info(f'Connected to Salesforce as {self.user}')
 
-    def extract(self):
-        pass
+    def extract(self, soql_query) -> pd.DataFrame:
+        """ Extract data from Salesforce using a SOQL query """
+        logging.info(f'Extracting data from Salesforce using query: {soql_query}')
+        records = self.sf.query_all(soql_query)['records']
+        logging.info(f'Extracted {len(records)} records from Salesforce')
+        dataframe = pd.json_normalize(records, sep='_')
+
+        return dataframe
