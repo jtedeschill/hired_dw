@@ -1,0 +1,14 @@
+- task:
+  name: "raw_mock_data"
+  class: "EL"
+  extractor: 
+    class: "FakeDataExtractor"
+    params: 
+      num_records: 1000
+  loader: 
+    class: "PandasGbqLoader"
+    params: 
+      table_name: "raw_mock_data"
+      dataset_name: "sample"
+      project_id: "dbtlab-371120"
+      if_exists: "replace"
