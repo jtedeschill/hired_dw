@@ -1,0 +1,26 @@
+{
+    "Id": [
+        "string",
+        "con_history_id"
+    ],
+    "ContactId": [
+        "string",
+        "contact_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "con_history_created_date"
+    ],
+    "Field": [
+        "string",
+        "con_history_field_name"
+    ],
+    "NewValue": [
+        "string",
+        "con_history_new_value"
+    ],
+    "OldValue": [
+        "string",
+        "con_history_old_value"
+    ]
+}

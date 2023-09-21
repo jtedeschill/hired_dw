@@ -1,0 +1,54 @@
+{
+    "Id": [
+        "string",
+        "task_id"
+    ],
+    "Account_Id": [
+        "string",
+        "account_id"
+    ],
+    "Who_Id": [
+        "string",
+        "who_id"
+    ],
+    "What_Type": [
+        "string",
+        "what_type"
+    ],
+    "What_Id": [
+        "string",
+        "what_id"
+    ],
+    "ActivityDate": [
+        "date",
+        "activity_date"
+    ],
+    "CompletedDateTime": [
+        "date",
+        "completion_date"
+    ],
+    "Subject": [
+        "string",
+        "subject"
+    ],
+    "Owner_Name": [
+        "string",
+        "owner_name"
+    ],
+    "Owner_UserRole_Name": [
+        "string",
+        "owner_role"
+    ],
+    "TaskSubtype": [
+        "string",
+        "task_subtype"
+    ],
+    "CallDurationInSeconds": [
+        "float64",
+        "call_duration_s"
+    ],
+    "CallDisposition": [
+        "string",
+        "call_disposition"
+    ]
+}

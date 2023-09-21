@@ -1,0 +1,30 @@
+{
+    "Id": [
+        "string",
+        "campaign_id"
+    ],
+    "ContactId": [
+        "string",
+        "contact_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "created_Date"
+    ],
+    "FCRM__FCR_QR_Date__c": [
+        "date",
+        "mql_date"
+    ],
+    "FCRM__FCR_QR__c": [
+        "bool",
+        "mql"
+    ],
+    "Campaign_Name": [
+        "string",
+        "campaign_name"
+    ],
+    "Campaign_Type": [
+        "string",
+        "campaign_type"
+    ]
+}
