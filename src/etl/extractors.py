@@ -50,17 +50,16 @@ class FakeDataExtractor(Extractor):
 class SalesforceExtractor(Extractor):
     """ Extract data from Salesforce """
     def __init__(self):
-        user = os.environ.get('SF_USER')
-        password = os.environ.get('SF_PASSWORD')
-        token = os.environ.get('SF_TOKEN')
-        self.user = user
-        self.password = password
-        self.token = token
-        self.sf = Salesforce(username=self.user, password=self.password, security_token=self.token, version='52.0')
-        logging.info(f'Connected to Salesforce as {self.user}')
+        pass
+
 
     def extract(self, soql_query) -> pd.DataFrame:
         """ Extract data from Salesforce using a SOQL query """
+        user = os.environ.get('SF_USER')
+        password = os.environ.get('SF_PASSWORD')
+        token = os.environ.get('SF_TOKEN')
+        self.sf = Salesforce(username=user, password=password, security_token=token, version='52.0')
+        logging.info(f'Connected to Salesforce as {self.user}')
         logging.info(f'Extracting data from Salesforce using query: {soql_query}')
         records = self.sf.query_all(soql_query)['records']
         logging.info(f'Extracted {len(records)} records from Salesforce')
