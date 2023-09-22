@@ -38,5 +38,9 @@ jobs:
                 gcloud services list
 
             - name: Run pipeline
+              env: 
+                SF_USER: ${{ secrets.SF_USER }}
+                SF_PASSWORD: ${{ secrets.SF_PASSWORD }}
+                SF_TOKEN: ${{ secrets.SF_TOKEN }}
               run: |
                     python src/salesforce.py
