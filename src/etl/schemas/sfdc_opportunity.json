@@ -62,5 +62,13 @@
     "SQO_Date_Active__c": [
         "date",
         "sqo_date"
+    ],
+    "Date_Entered_Closed_Won__c",: [
+        "date",
+        "closed_won_date"
+    ]
+    "Date_Entered_Closed_Lost__c",: [
+        "date",
+        "closed_lost_date"
     ]
 }
