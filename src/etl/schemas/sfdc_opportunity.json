@@ -50,5 +50,17 @@
     "SQL_Date__c": [
         "date",
         "sql_date"
+    ],
+    "Plan_Type__c": [
+        "string",
+        "plan_type"
+    ],
+    "SQO__c": [
+        "bool",
+        "sqo_checkbox"
+    ],
+    "SQO_Date_Active__c": [
+        "date",
+        "sqo_date"
     ]
 }
