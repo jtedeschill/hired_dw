@@ -15,7 +15,7 @@ Plan_Type__c,
 type,
 SQO__c,
 SQO_Date_Active__c,
-Date_Entered_Closed_Won_c,
+Date_Entered_Closed_Won__c,
 Date_Entered_Closed_Lost__c
 
 FROM OPPORTUNITY
