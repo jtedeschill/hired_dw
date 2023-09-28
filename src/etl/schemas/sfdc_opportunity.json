@@ -63,12 +63,8 @@
         "date",
         "sqo_date"
     ],
-    "Date_Entered_Closed_Won__c" : [
+    "CloseDate" : [
         "date",
-        "closed_won_date"
-    ],
-    "Date_Entered_Closed_Lost__c" : [
-        "date",
-        "closed_lost_date"
+        "closed_date"
     ]
 }
