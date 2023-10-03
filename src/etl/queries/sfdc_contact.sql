@@ -13,7 +13,8 @@ Disqualified_Reasons__c,
 FCRM__FCR_Status__c,
 owner.name,
 owner.UserRole.name,
-email
+email,
+No_Longer_at_Company__c
 
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
