@@ -70,5 +70,9 @@
     "Deal_Type__c": [
         "string",
         "deal_type"
+    ],
+    "Campaign_Type": [
+        "string",
+        "campaign_type"
     ]
 }
