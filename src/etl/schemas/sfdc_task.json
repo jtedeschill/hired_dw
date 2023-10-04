@@ -50,5 +50,9 @@
     "CallDisposition": [
         "string",
         "call_disposition"
+    ],
+    "CreatedDate": [
+        "date",
+        "created_date"
     ]
 }
