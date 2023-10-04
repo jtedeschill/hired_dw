@@ -19,4 +19,4 @@ SQO_Date_Active__c,
 CloseDate
 
 FROM OPPORTUNITY
-WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c IS NULL)
+WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c = NULL)
