@@ -66,5 +66,9 @@
     "CloseDate" : [
         "date",
         "closed_date"
+    ],
+    "Deal_Type__c": [
+        "string",
+        "deal_type"
     ]
 }
