@@ -12,9 +12,11 @@ owner.name,
 owner.UserRole.name,
 RecordType.name,
 Plan_Type__c,
+Deal_Type__c,
 type,
 SQO__c,
 SQO_Date_Active__c,
 CloseDate
 
 FROM OPPORTUNITY
+WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c IS NULL)
