@@ -14,5 +14,6 @@
 "dfox__Stage__c": ["string", "account_df_stage"],
 "Website": ["string", "website"],
 "No_of_Open_Tech_Roles__c": ["float64", "no_open_tech_roles"],
-"Last_Updated_Open_Roles__c": ["date", "job_scraping_trial_date"]
+"Last_Updated_Open_Roles__c": ["date", "job_scraping_trial_date"],
+"Reassignment_Reason__c": ["string", "reassignment_reason"]
 }
