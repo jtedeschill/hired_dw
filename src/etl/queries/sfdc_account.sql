@@ -15,5 +15,6 @@ SELECT
   Account_HQ_Country__c,
   Type,
   dfox__Stage__c,
-  website
+  website,
+  Reassignment_Reason__c
 FROM ACCOUNT
