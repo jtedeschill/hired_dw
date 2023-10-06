@@ -1,0 +1,13 @@
+hired_dw:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: hired-393411 # Replace this with your project id
+      dataset: Hired # Replace this with dbt_your_name, e.g. dbt_bob
+      threads: 4
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
