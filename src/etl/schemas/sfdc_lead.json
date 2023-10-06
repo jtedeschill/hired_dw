@@ -1,0 +1,46 @@
+{
+    "Id": [
+        "string",
+        "lead_id"
+    ],
+    "CreatedDate": [
+        "date",
+        "lead_created_date"
+    ],
+    "Disqualified_Reasons__c": [
+        "string",
+        "disqualified_reason"
+    ],
+    "Entered_Disqualified_Date__c": [
+        "date",
+        "disqualified_date"
+    ],
+    "howDidYouHearAboutUs__c": [
+        "string",
+        "how_did_you_hear_about_us"
+    ],
+    "Nurture_Reasons__c": [
+        "string",
+        "nurture_reason"
+    ],
+    "Entered_Nurture_Date__c": [
+        "date",
+        "nurture_date"
+    ],
+    "Status": [
+        "string",
+        "lead_status"
+    ],
+    "Disqualified_Other__c": [
+        "string",
+        "disqualified_open_text"
+    ],
+    "Nurture_Other__c": [
+        "string",
+        "nurture_open_text"
+    ],
+    "type__c": [
+        "string",
+        "lead_type"
+    ]
+}
