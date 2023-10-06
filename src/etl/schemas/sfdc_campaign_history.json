@@ -7,6 +7,10 @@
         "string",
         "contact_id"
     ],
+    "LeadId": [
+        "string",
+        "lead_id"
+    ],
     "CreatedDate": [
         "date",
         "created_Date"
