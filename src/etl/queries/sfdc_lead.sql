@@ -9,7 +9,8 @@ Entered_Nurture_Date__c,
 Status,
 Disqualified_Other__c,
 Nurture_Other__c,
-type__c
+type__c,
+Owner.name
 
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
