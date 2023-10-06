@@ -75,6 +75,10 @@
         "date",
         "nurture_date"
     ],
+    "howDidYouHearAboutUs__c": [
+        "string",
+        "how_did_you_hear_about_us"
+    ],
     "FCRM__FCR_Status__c": [
         "string",
         "contact_status"
