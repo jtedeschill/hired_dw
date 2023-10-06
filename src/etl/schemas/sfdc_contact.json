@@ -55,6 +55,26 @@
         "string",
         "contact_disqualified_reason"
     ],
+    "Entered_Disqualified__c": [
+        "date",
+        "disqualified_date"
+    ],
+    "Disqualified_Other__c": [
+        "string",
+        "disqualified_open_field"
+    ],
+     "Nurture_Reasons__c": [
+        "string",
+        "nurture_reason"
+    ],
+    "Nurture_Other__c": [
+        "string",
+        "nurture_open_field"
+    ],
+    "Entered_Nurture__c": [
+        "date",
+        "nurture_date"
+    ],
     "FCRM__FCR_Status__c": [
         "string",
         "contact_status"
