@@ -42,5 +42,9 @@
     "type__c": [
         "string",
         "lead_type"
+    ],
+     "Owner_Name": [
+        "string",
+        "lead_owner_name"
     ]
 }
