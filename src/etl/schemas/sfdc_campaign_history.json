@@ -31,7 +31,7 @@
         "string",
         "campaign_type"
     ],
-    "mql_owner_role__c": [
+    "MQL_Owner_Role__c": [
         "string",
         "mql_owner_role"
     ],
