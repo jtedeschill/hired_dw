@@ -30,5 +30,17 @@
     "Campaign_Type": [
         "string",
         "campaign_type"
+    ],
+    "mql_owner_role__c": [
+        "string",
+        "mql_owner_role"
+    ],
+    "MQL_Owner__c": [
+        "string",
+        "mql_owner"
+    ],
+    "FCRM__FCR_First_Owner_Worked__c": [
+        "string",
+        "first_owner_worked"
     ]
 }
