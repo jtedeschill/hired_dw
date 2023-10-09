@@ -7,7 +7,7 @@ FCRM__FCR_QR__c,
 FCRM__FCR_QR_Date__c,
 campaign.name,
 campaign.type,
-mql_owner_role__c,
+MQL_Owner_Role__c,
 MQL_Owner__c,
 FCRM__FCR_First_Owner_Worked__c
 
