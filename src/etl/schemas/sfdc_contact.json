@@ -86,5 +86,9 @@
     "No_Longer_at_Company__c": [
         "boolean",
         "no_longer_at_company"
+    ],
+    "UserGems__Is_a_UserGem__c": [
+        "boolean",
+        "is_usergem"
     ]
 }
