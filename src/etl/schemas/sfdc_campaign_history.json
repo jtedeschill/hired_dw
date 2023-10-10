@@ -42,5 +42,13 @@
     "FCRM__FCR_First_Owner_Worked__c": [
         "string",
         "first_owner_worked"
+    ],
+    "Campaign_Intent_Type__c": [
+        "string",
+        "intent_type"
+    ],
+    "Status": [
+        "string",
+        "status"
     ]
 }
