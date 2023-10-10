@@ -21,7 +21,8 @@ owner.name,
 owner.UserRole.name,
 email,
 No_Longer_at_Company__c,
-UserGems__Is_a_UserGem__c
+UserGems__Is_a_UserGem__c,
+LD_BookIt_Log_ID__c
 
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
