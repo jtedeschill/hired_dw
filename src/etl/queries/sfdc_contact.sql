@@ -20,7 +20,8 @@ FCRM__FCR_Status__c,
 owner.name,
 owner.UserRole.name,
 email,
-No_Longer_at_Company__c
+No_Longer_at_Company__c,
+UserGems__Is_a_UserGem__c
 
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
