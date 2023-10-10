@@ -16,5 +16,8 @@ SELECT
   Type,
   dfox__Stage__c,
   website,
-  Reassignment_Reason__c
+  Reassignment_Reason__c,
+  Industry_Group__c, 
+  DF_Industry__c, 
+  Industry
 FROM ACCOUNT
