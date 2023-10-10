@@ -54,5 +54,9 @@
     "Job_Level__c": [
         "string",
         "job_level"
+    ],
+    "UserGems__Is_a_UserGem__c": [
+        "UserGems__Is_a_UserGem__c",
+        "is_usergem"
     ]
 }
