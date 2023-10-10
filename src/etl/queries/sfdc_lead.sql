@@ -12,7 +12,8 @@ Nurture_Other__c,
 type__c,
 Owner.name,
 Job_Function__c, 
-Job_Level__c
+Job_Level__c,
+UserGems__Is_a_UserGem__c
 
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
