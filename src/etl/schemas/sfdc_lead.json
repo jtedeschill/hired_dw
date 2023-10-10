@@ -56,7 +56,7 @@
         "job_level"
     ],
     "UserGems__Is_a_UserGem__c": [
-        "UserGems__Is_a_UserGem__c",
+        "boolean",
         "is_usergem"
     ]
 }
