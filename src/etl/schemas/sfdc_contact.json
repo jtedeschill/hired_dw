@@ -90,5 +90,9 @@
     "UserGems__Is_a_UserGem__c": [
         "boolean",
         "is_usergem"
+    ],
+    "LD_BookIt_Log_ID__c": [
+        "string",
+        "bookit_id"
     ]
 }
