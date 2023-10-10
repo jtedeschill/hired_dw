@@ -46,5 +46,13 @@
      "Owner_Name": [
         "string",
         "lead_owner_name"
+    ],
+    "Job_Function__c": [
+        "string",
+        "job_function"
+    ],
+    "Job_Level__c": [
+        "string",
+        "job_level"
     ]
 }
