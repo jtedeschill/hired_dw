@@ -62,5 +62,9 @@
     "LD_BookIt_Log_ID__c": [
         "string",
         "bookit_id"
+    ],
+    "Account_Segment__c" [
+        "string",
+        "account_segment"
     ]
 }
