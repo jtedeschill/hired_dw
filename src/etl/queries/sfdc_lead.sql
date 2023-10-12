@@ -14,7 +14,8 @@ Owner.name,
 Job_Function__c, 
 Job_Level__c,
 UserGems__Is_a_UserGem__c,
-LD_BookIt_Log_ID__c
+LD_BookIt_Log_ID__c,
+Account_Segment__c
 
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
