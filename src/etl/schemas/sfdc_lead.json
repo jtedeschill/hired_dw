@@ -63,7 +63,7 @@
         "string",
         "bookit_id"
     ],
-    "Account_Segment__c" [
+    "Account_Segment__c": [
         "string",
         "account_segment"
     ]
