@@ -94,5 +94,9 @@
     "LD_BookIt_Log_ID__c": [
         "string",
         "bookit_id"
+    ],
+    "Assigned_To__r_Name": [
+        "string",
+        "assigned_to_owner"
     ]
 }
