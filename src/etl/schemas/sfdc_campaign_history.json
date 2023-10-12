@@ -50,5 +50,13 @@
     "Status": [
         "string",
         "status"
+    ],
+    "FCRM__FCR_Last_Modified_By_Formula__c": [
+        "string",
+        "campaign_last_modified_by"
+    ],
+    "FCRM__FCR_Last_Modified_By_Date_Formula__c": [
+        "date",
+        "campaign_last_modified_date"
     ]
 }
