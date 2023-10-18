@@ -19,5 +19,6 @@ SELECT
   Reassignment_Reason__c,
   Industry_Group__c, 
   DF_Industry__c, 
-  Industry
+  Industry,
+  Sub_Industry__c
 FROM ACCOUNT
