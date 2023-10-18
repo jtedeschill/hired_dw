@@ -19,6 +19,10 @@
         "string",
         "how_did_you_hear_about_us"
     ],
+    "How_Did_You_Hear_About_Us_Reasons__c": [
+        "string",
+        "how_did_you_hear_about_us_reasons"
+    ],
     "Nurture_Reasons__c": [
         "string",
         "nurture_reason"
