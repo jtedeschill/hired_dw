@@ -18,5 +18,6 @@
 "Reassignment_Reason__c": ["string", "reassignment_reason"],
 "Industry_Group__c": ["string", "industry_group"],
 "DF_Industry__c": ["string", "df_industry"],
-"Industry": ["string", "industry"]
+"Industry": ["string", "industry"],
+"Sub_Industry__c": ["string", "sub_industry_clearbit"]
 }
