@@ -12,7 +12,8 @@ Owner.Name,
 owner.UserRole.name,
 TaskSubtype,
 CallDurationInSeconds,
-CallDisposition
+CallDisposition,
+Description
 
 FROM Task
 WHERE owner.name != 'Hired Admin'
