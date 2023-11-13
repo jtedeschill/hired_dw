@@ -54,5 +54,9 @@
     "CreatedDate": [
         "date",
         "created_date"
+    ],
+    "Description": [
+        "string",
+        "description"
     ]
 }
