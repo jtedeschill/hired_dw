@@ -17,7 +17,7 @@ type,
 SQO__c,
 SQO_Date_Active__c,
 CloseDate,
-Campaign.type
+Campaign.type 
 
 FROM OPPORTUNITY
 WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c = NULL)
