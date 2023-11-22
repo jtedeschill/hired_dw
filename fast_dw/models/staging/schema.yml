@@ -1,0 +1,63 @@
+
+version: 2
+
+models:
+  - name: engagement_events
+    description: "A model to stage engagement events from Hired Sales Cycles
+    columns:
+      - name: account_id
+        description: "The unique identifier for the account"
+        tests:
+          - not_null
+      - name: event_date
+        description: "The date of the event"
+        tests:
+          - not_null
+      - name: event_type
+        description: "A string representing the type of event, it could be `Account Created`, `MQL`, `Call`, `Email`, `Task`, `Closed Lost`, `Closed Won`, and Opportunities Stages"
+        tests:
+          - not_null
+      - name: event_attribute
+        description: "The first attibute associated to the event"
+
+      - name: event_attribute_2
+        description: "The second attibute associated to the event"
+
+      - name: event_attribute_3 
+        description: "The third attibute associated to the event"
+
+      - name: event_id
+        description: "The unique identifier for the event"
+        tests:
+          - unique
+          - not_null
+
+      - name: last_event_date
+        description: "The date of the last event, it can be null if there is no previous event"
+
+      - name: last_event_type
+        description: "The type of the last event, it can be null if there is no previous event"
+
+      - name: event_number
+        description: "The number of the event for an account, it starts from 1 and it is incremented by 1 for each event"
+        tests:
+          - not_null
+          - 
+
+
+
+
+
+
+# account_id,
+# event_date,
+# event_type,
+# event_attribute,
+# event_attribute_2,
+# event_attribute_3,
+# GENERATE_UUID() as event_id,
+# lag(event_date) over w1 last_event_date,
+# lag(event_type) over w1 last_event_type,
+# row_number() over w1 as event_number,
+# date_diff(event_date, lag(event_date) over w1,day) as days_since_last_event,
+# count(*) over w2 total_events,
