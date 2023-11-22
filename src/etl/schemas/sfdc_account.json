@@ -19,5 +19,7 @@
 "Industry_Group__c": ["string", "industry_group"],
 "DF_Industry__c": ["string", "df_industry"],
 "Industry": ["string", "industry"],
-"Sub_Industry__c": ["string", "sub_industry_clearbit"]
+"Sub_Industry__c": ["string", "sub_industry_clearbit"],
+"Most_Recent_IVR__c": ["date", "most_recent_ivr"],
+"Most_Recent_Position_Posted__c": ["date", "most_recent_position_posted"]
 }
