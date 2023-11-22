@@ -20,5 +20,8 @@ SELECT
   Industry_Group__c, 
   DF_Industry__c, 
   Industry,
-  Sub_Industry__c
+  Sub_Industry__c,
+  Most_Recent_IVR__c,
+  Most_Recent_Position_Posted__c
+  
 FROM ACCOUNT
