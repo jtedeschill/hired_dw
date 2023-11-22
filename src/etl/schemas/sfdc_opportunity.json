@@ -74,5 +74,9 @@
     "Campaign_Type": [
         "string",
         "campaign_type"
+    ],
+    "Amount": [
+        "float64",
+        "amount"
     ]
 }
