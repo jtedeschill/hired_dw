@@ -102,5 +102,45 @@
     "Assigned_To__r_Name": [
         "string",
         "assigned_to_owner"
+    ],
+    "utm_campaign__c": [
+        "string",
+        "utm_campaign"
+    ],
+    "Original_UTM_Campaign__c": [
+        "string",
+        "original_utm_campaign"
+    ],
+    "utm_source__c": [
+        "string",
+        "utm_source"
+    ],
+    "Original_UTM_Source__c": [
+        "string",
+        "original_utm_source"
+    ],
+    "utm_medium__c": [
+        "string",
+        "utm_medium"
+    ],
+    "Original_UTM_Medium__c": [
+        "string",
+        "original_utm_medium__c"
+    ],
+    "utm_content__c": [
+        "string",
+        "utm_content"
+    ],
+    "Original_UTM_Content__c": [
+        "string",
+        "original_utm_content"
+    ],
+    "UTM_Description__c": [
+        "string",
+        "utm_description"
+    ],
+    "Original_UTM_Description__c": [
+        "string",
+        "original_utm_description"
     ]
 }
