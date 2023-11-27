@@ -70,5 +70,45 @@
     "Account_Segment__c": [
         "string",
         "account_segment"
+    ],
+    "UTM_Campaign__c": [
+        "string",
+        "utm_campaign"
+    ],
+    "Original_UTM_Campaign__c": [
+        "string",
+        "original_utm_campaign"
+    ],
+    "UTM_Source__c": [
+        "string",
+        "utm_source"
+    ],
+    "Original_UTM_Source__c": [
+        "string",
+        "original_utm_source"
+    ],
+    "UTM_Medium__c": [
+        "string",
+        "utm_medium"
+    ],
+    "Original_UTM_Medium__c": [
+        "string",
+        "original_utm_medium__c"
+    ],
+    "UTM_Content__c": [
+        "string",
+        "utm_content"
+    ],
+    "Original_UTM_Content__c": [
+        "string",
+        "original_utm_content"
+    ],
+    "UTM_Description__c": [
+        "string",
+        "utm_description"
+    ],
+    "Original_UTM_Description__c": [
+        "string",
+        "original_utm_description"
     ]
 }
