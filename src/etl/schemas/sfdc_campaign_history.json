@@ -58,5 +58,9 @@
     "FCRM__FCR_Last_Modified_By_Date_Formula__c": [
         "date",
         "campaign_last_modified_date"
+    ],
+    "FCRM__FCR_Inquiry_Target__c": [
+        "bool",
+        "inquiry"
     ]
 }
