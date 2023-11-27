@@ -24,7 +24,17 @@ email,
 No_Longer_at_Company__c,
 UserGems__Is_a_UserGem__c,
 LD_BookIt_Log_ID__c,
-Assigned_To__r.Name
+Assigned_To__r.Name,
+utm_campaign__c,
+Original_UTM_Campaign__c, 
+utm_source__c,
+Original_UTM_Source__c, 
+utm_medium__c, 
+Original_UTM_Medium__c, 
+utm_content__c, 
+Original_UTM_Content__c, 
+UTM_Description__c, 
+Original_UTM_Description__c
 
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
