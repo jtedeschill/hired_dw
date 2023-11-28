@@ -93,7 +93,7 @@
     ],
     "Original_UTM_Medium__c": [
         "string",
-        "original_utm_medium__c"
+        "original_utm_medium"
     ],
     "UTM_Content__c": [
         "string",
