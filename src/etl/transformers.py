@@ -86,7 +86,7 @@ class SFTransformer(Transformer):
                 # if it is a date, convert to datetime
                 if data_type == "date":
                     self.dataframe[column_name] = pd.to_datetime(
-                        pd.to_datetime(self.dataframe["CreatedDate"], errors="coerce")
+                        pd.to_datetime(self.dataframe["CreatedDate"], errors="coerce", utc=False)
                         .dt.tz_convert("America/Los_Angeles")
                         .dt.strftime("%Y-%m-%d %H:%M:%S")
                     )
