@@ -14,5 +14,9 @@
     "Manager.Name": [
         "string",
         "manager_name"
+    ],
+    "IsActive": [
+        "string",
+        "is_active"
     ]
 }
