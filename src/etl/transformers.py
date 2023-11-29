@@ -86,14 +86,14 @@ class SFTransformer(Transformer):
                 # if it is a date, convert to datetime
                 if data_type == "date":
                     self.dataframe[column_name] = pd.to_datetime(
-                        pd.to_datetime(self.dataframe["CreatedDate"], errors="coerce", utc=False)
-                        .dt.strftime("%Y-%m-%d %H:%M:%S")
+                        pd.to_datetime(self.dataframe["CreatedDate"], errors="coerce", utc=True)
+                        .dt.tz_convert('Asia/Kolkata')
                     )
                     # localize to los angeles
                     self.dataframe[column_name] = pd.to_datetime(
                         self.dataframe[column_name]
                     ).dt.tz_convert("America/Los_Angeles")
-                    
+
                 # otherwise, convert to the specified data type
                 else:
                     self.dataframe[column_name] = (
