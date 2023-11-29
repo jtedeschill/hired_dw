@@ -68,5 +68,6 @@ class SalesforceExtractor(Extractor):
         records = self.sf.query_all(soql_query)['records']
         logging.info(f'Extracted {len(records)} records from Salesforce')
         dataframe = pd.json_normalize(records, sep='_')
+        logging.info(f'Schema: {dataframe.columns}')
 
         return dataframe
