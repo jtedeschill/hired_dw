@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 import os
 from pathlib import Path
 from etl import ETL, EL
-from etl.extractors import FakeDataExtractor
+from etl.extractors import SalesforceExtractor
 from etl.transformers import PandasTransformer
 from etl.loaders import PandasGbqLoader, GcsLoader
 
@@ -18,14 +18,27 @@ logging.basicConfig(level=logging.INFO)
 
 
 
-
 if __name__ == '__main__':
-    with open('tests/test_tasks.yml') as f:
-        tasks = yaml.safe_load(f)
 
-    test_el = EL()
-    test_el.initialize(tasks[0]['name'],FakeDataExtractor(), PandasGbqLoader(), tasks[0])
-    test_el.run()
+    salesforce_extractor = SalesforceExtractor()
+
+    soql_query = "hired_dw/src/etl/queries/sfdc_account.sql"
+
+    df = salesforce_extractor.extract(soql_query)
+
+    logging.info(df.columns)
+
+    # localize created date
+    print(df['CreatedDate'].head())
 
 
-# {'task': None, 'name': 'raw_mock_data', 'class': 'EL', 'extractor': {'class': 'FakeDataExtractor', 'params': {'num_records': 1000}}, 'loader': {'class': 'PandasGbqLoader', 'params': {'table_name': 'raw_mock_data', 'dataset_name': 'sample', 'project_id': 'dbtlab-371120', 'if_exists': 'replace'}}}
+    # localize to los angeles
+    df['CreatedDate'] = pd.to_datetime(pd.to_datetime(df['CreatedDate']).dt.tz_convert('America/Los_Angeles').dt.strftime('%Y-%m-%d %H:%M:%S'))
+    print(df['CreatedDate'].head())
+    # convert to datetime
+
+
+
+    
+
+    
