@@ -9,6 +9,7 @@ from registry import register_class
 import json
 from pathlib import Path
 
+
 class Transformer(ABC):
     @abstractmethod
     def transform(self):
@@ -17,23 +18,26 @@ class Transformer(ABC):
 
 @register_class
 class PandasTransformer(Transformer):
-    """ Simple transformer that transforms a dataframe through a function """
+    """Simple transformer that transforms a dataframe through a function"""
+
     def __init__(self, dataframe, function):
         self.dataframe = dataframe
         self.function = function
 
     def transform(self):
-        logging.info(f'Transforming {len(self.dataframe)} records')
+        logging.info(f"Transforming {len(self.dataframe)} records")
         return self.function(self.dataframe)
+
 
 @register_class
 class SFTransformer(Transformer):
-
     def __init__(self):
         pass
 
-    def transform(self, dataframe, schema: str|None = None, remove_suffix=True, lowercase=True):
-        """ Transform a dataframe from Salesforce 
+    def transform(
+        self, dataframe, schema: str | None = None, remove_suffix=True, lowercase=True
+    ):
+        """Transform a dataframe from Salesforce
         To apply a schema, pass a path with a json with the following format:
         ```
         {'column_name': ('data_type','final column name')}
@@ -66,7 +70,7 @@ class SFTransformer(Transformer):
 
         """
         self.dataframe = dataframe
-        logging.info(f'Transforming {len(self.dataframe)} records')
+        logging.info(f"Transforming {len(self.dataframe)} records")
 
         if schema:
             with open(Path(schema)) as f:
@@ -80,27 +84,32 @@ class SFTransformer(Transformer):
             # apply data type conversions
             for column_name, (data_type, _) in schema.items():
                 # if it is a date, convert to datetime
-                if data_type == 'date':
-                    self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name].copy(), errors='coerce')
-                    # apply timezone conversion
-                    self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name].copy().dt.tz_convert('America/Los_Angeles').dt.strftime('%Y-%m-%d %H:%M:%S'))
+                if data_type == "date":
+                    self.dataframe[column_name] = pd.to_datetime(
+                        pd.to_datetime(self.dataframe["CreatedDate"], errors="coerce")
+                        .dt.tz_convert("America/Los_Angeles")
+                        .dt.strftime("%Y-%m-%d %H:%M:%S")
+                    )
                 # otherwise, convert to the specified data type
                 else:
-                    self.dataframe[column_name] = self.dataframe[column_name].copy().astype(data_type)
+                    self.dataframe[column_name] = (
+                        self.dataframe[column_name].copy().astype(data_type)
+                    )
             # apply column name conversions
             for column_name, (_, final_column_name) in schema.items():
-                self.dataframe = self.dataframe.rename(columns={column_name: final_column_name})
-
-
+                self.dataframe = self.dataframe.rename(
+                    columns={column_name: final_column_name}
+                )
 
         elif remove_suffix:
-            dataframe = (dataframe
-                        # Remove the __c suffix from the column names
-                        .rename(columns=lambda x: x.replace('__c', ''))
-                        # Remove the __r suffix from the column names
-                        .rename(columns=lambda x: x.replace('__r', ''))
-                        # Trim dunder from column names
-                        .rename(columns=lambda x: x.strip('_'))
+            dataframe = (
+                dataframe
+                # Remove the __c suffix from the column names
+                .rename(columns=lambda x: x.replace("__c", ""))
+                # Remove the __r suffix from the column names
+                .rename(columns=lambda x: x.replace("__r", ""))
+                # Trim dunder from column names
+                .rename(columns=lambda x: x.strip("_"))
             )
         if lowercase:
             dataframe = dataframe.rename(columns=lambda x: x.lower())
