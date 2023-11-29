@@ -1,0 +1,18 @@
+{
+    "Id": [
+        "string",
+        "user_id"
+    ],
+    "Name": [
+        "string",
+        "user_name"
+    ],
+    "Role_Name__c": [
+        "string",
+        "user_role"
+    ],
+    "Manager.Name": [
+        "string",
+        "manager_name"
+    ]
+}

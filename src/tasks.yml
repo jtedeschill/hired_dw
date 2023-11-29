@@ -168,3 +168,22 @@
       dataset_id: "Hired"
       project_id: "hired-393411"
       if_exists: "replace"
+      
+- task:
+  name: "sfdc_user"
+  class: "ETL"
+  extractor: 
+    class: "SalesforceExtractor"
+    params:
+      soql_query: "./src/etl/queries/sfdc_user.sql"
+  transformer:
+    class: "SFTransformer"
+    params:
+      schema: "./src/etl/schemas/sfdc_user.json"
+  loader:
+    class: "PandasGbqLoader"
+    params:
+      table_name: "sfdc_user"
+      dataset_id: "Hired"
+      project_id: "hired-393411"
+      if_exists: "replace"
