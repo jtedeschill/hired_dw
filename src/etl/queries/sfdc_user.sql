@@ -1,3 +1,3 @@
 SELECT
-Id, Name, Role_Name__c, manager.name, IsActive
+Id, Name, Role_Name__c, Manager.name, IsActive
 FROM user
