@@ -26,5 +26,3 @@ SELECT
   Careers_Page_Link__c
   
 FROM ACCOUNT
-
-LIMIT 100
