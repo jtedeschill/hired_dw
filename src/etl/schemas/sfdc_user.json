@@ -11,7 +11,7 @@
         "string",
         "user_role"
     ],
-    "Manager.Name": [
+    "Manager.name": [
         "string",
         "manager_name"
     ],
