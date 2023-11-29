@@ -82,7 +82,8 @@ class SFTransformer(Transformer):
                 # if it is a date, convert to datetime
                 if data_type == 'date':
                     self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name].copy(), errors='coerce')
-
+                    # apply timezone conversion
+                    self.dataframe[column_name] = pd.to_datetime(self.dataframe[column_name].copy().dt.tz_convert('America/Los_Angeles').dt.strftime('%Y-%m-%d %H:%M:%S'))
                 # otherwise, convert to the specified data type
                 else:
                     self.dataframe[column_name] = self.dataframe[column_name].copy().astype(data_type)
