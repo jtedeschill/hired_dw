@@ -18,11 +18,12 @@ logging.basicConfig(level=logging.INFO)
 
 
 
+
 if __name__ == '__main__':
 
     salesforce_extractor = SalesforceExtractor()
 
-    soql_query = "hired_dw/src/etl/queries/sfdc_account.sql"
+    soql_query = "src/etl/queries/sfdc_account.sql"
 
     df = salesforce_extractor.extract(soql_query)
 
@@ -33,8 +34,8 @@ if __name__ == '__main__':
 
 
     # localize to los angeles
-    df['CreatedDate'] = pd.to_datetime(pd.to_datetime(df['CreatedDate']).dt.tz_convert('America/Los_Angeles').dt.strftime('%Y-%m-%d %H:%M:%S'))
-    print(df['CreatedDate'].head())
+    df['Test'] = pd.to_datetime(pd.to_datetime(df['Scraped_JD_Signal_Core_Tech__c']).dt.tz_convert('America/Los_Angeles').dt.strftime('%Y-%m-%d %H:%M:%S'))
+    print(df[['Test','Scraped_JD_Signal_Core_Tech__c']].head())
     # convert to datetime
 
 
