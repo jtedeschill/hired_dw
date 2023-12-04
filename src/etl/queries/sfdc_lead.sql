@@ -1,7 +1,7 @@
 SELECT
 id,
 CreatedDate,
-Disqualified_Reasons__c, 
+toLabel(Disqualified_Reasons__c), 
 Entered_Disqualified_Date__c, 
 howDidYouHearAboutUs__c, 
 How_Did_You_Hear_About_Us_Reasons__c,
