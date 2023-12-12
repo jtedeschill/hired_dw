@@ -1,8 +1,8 @@
 name: Run Data Pipelines in GBQ
 on:
     schedule:
-        # everyday at 5:00 AM
-        - cron: '0 5 * * *'
+        # everyday every hour to run the pipeline
+        - cron: '0 * * * *'
 jobs:
     run-pipeline:
         name: Run Pipeline
