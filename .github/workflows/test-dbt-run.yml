@@ -38,6 +38,7 @@ jobs:
             - name: 'gcloud test'
               run: |-
                 gcloud services list
+                
             - name: Authenticate using service account
               working-directory: ./fast_dw
               run: 'echo "$KEYFILE" > ./dbt-service-account.json'
