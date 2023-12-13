@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - main
+
 jobs:
     run-pipeline:
         name: DBT Build Test
@@ -43,6 +44,8 @@ jobs:
               env:
                 GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
               run: |-
+                    ls -la
+                    dbt deps
                     dbt run
 
 
