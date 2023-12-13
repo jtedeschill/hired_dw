@@ -44,7 +44,7 @@ jobs:
               env:
                 GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
               run: |-
-                    ls -la
+                    ls
                     dbt deps --target dev
                     dbt build --target dev
 
