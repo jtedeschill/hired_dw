@@ -46,6 +46,6 @@ jobs:
               run: |-
                     ls
                     dbt deps --target dev
-                    dbt build --target dev
+                    dbt build --target dev --profiles-dir . --project-dir . --full-refresh --no-version-check
 
 
