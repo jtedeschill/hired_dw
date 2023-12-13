@@ -2,62 +2,215 @@
 version: 2
 
 models:
-  - name: engagement_events
-    description: "A model to stage engagement events from Hired Sales Cycles
+  - name: ob_tactical_metrics
+    description: "Tactical metrics for Outbound"
     columns:
-      - name: account_id
-        description: "The unique identifier for the account"
-        tests:
-          - not_null
-      - name: event_date
-        description: "The date of the event"
-        tests:
-          - not_null
+      - name: first_activity_date
+        description: "Account's first activity date"
+    
+      - name: account_latest_MQL_date
+        description: "Accounts latest MQL date"
+
+      - name: latest_mql_contact_id
+        description: "Contact ID of the latest MQL"
+
+      - name: owner_name
+        description: "Account's owner name"
+
+      - name: job_scraping_date
+        description: "Date of the job scraping"
+
+      - name: no_open_tech_roles
+        description: "Number of open tech roles"
+
+      - name: account_name
+        description: "Account name"
+
+      - name: SQO
+        description: "Sales Qualified Opportunity"
+
+      - name: Closed_Won
+        description: "Closed Won"
+
+      - name: SAL
+        description: "Sales Accepted Lead"
+
+      - name: SAL_name
+        description: "Sales Accepted Lead name"
+
+      - name: sqo_date
+        description: "SQO date"
+
+      - name: closed_won_date
+        description: "Closed Won date"
+
+      - name: sal_date
+        description: "SAL date"
+
+      - name: access
+        description: "Access"
+
+      - name: access_date
+        description: "Access date"
+
+      - name: related_contact_id
+
+      - name: activity_date
+        description: "Activity date"
+
+      - name: activity_owner
+
+      - name: first_activity_owner
+
+      - name: activity_subject
+
+      - name: call_duration
+
       - name: event_type
-        description: "A string representing the type of event, it could be `Account Created`, `MQL`, `Call`, `Email`, `Task`, `Closed Lost`, `Closed Won`, and Opportunities Stages"
-        tests:
-          - not_null
-      - name: event_attribute
-        description: "The first attibute associated to the event"
 
-      - name: event_attribute_2
-        description: "The second attibute associated to the event"
+      - name: contact_last_mql_date
+        description: "Contact's last MQL date"
 
-      - name: event_attribute_3 
-        description: "The third attibute associated to the event"
+      - name: job_function
 
-      - name: event_id
-        description: "The unique identifier for the event"
-        tests:
-          - unique
-          - not_null
+      - name: job_level
 
-      - name: last_event_date
-        description: "The date of the last event, it can be null if there is no previous event"
+      - name: contact_disqualified_reason
 
-      - name: last_event_type
-        description: "The type of the last event, it can be null if there is no previous event"
+      - name: disqualified_date
 
-      - name: event_number
-        description: "The number of the event for an account, it starts from 1 and it is incremented by 1 for each event"
-        tests:
-          - not_null
-          - 
+      - name: disqualified_open_field
+
+      - name: nurture_reason
+
+      - name: nurture_date
+
+      - name: nurture_open_field
+
+      - name: contact_status
+
+      - name: related_contact_name
+
+      - name: is_usergem
+
+      - name: account_segment
+
+      - name: tech_vs_nontech
+
+      - name: most_recent_ivr
+
+      - name: most_recent_position_posted
+
+      - name: account_status
+
+      - name: m_access
 
 
+      - name: m_access_link
+
+      - name: m_account_link
+
+      - name: m_account_link_classic
+
+      - name: m_bucket
+
+      - name: m_call_duration
+
+      - name: m_contact_id
+
+      - name: m_contact_link
+
+      - name: m_cw_link
+
+      - name: m_cws
+
+      - name: m_first_activity_date_business_days
+
+      - name: m_ivr
+
+      - name: m_manager
+
+      - name: m_mql_contact_link
+
+      - name: m_position_posted
+
+      - name: m_sal
+
+      - name: m_sal_link
+
+      - name: m_sal_link_classic
+
+      - name: m_sqo
+
+      - name: m_sqo_link
+
+      - name: m_task_before_sal
+
+      - name: m_weekday_first_activity
+
+      - name: account_status_1
 
 
-
-
-# account_id,
-# event_date,
-# event_type,
-# event_attribute,
-# event_attribute_2,
-# event_attribute_3,
-# GENERATE_UUID() as event_id,
-# lag(event_date) over w1 last_event_date,
-# lag(event_type) over w1 last_event_type,
-# row_number() over w1 as event_number,
-# date_diff(event_date, lag(event_date) over w1,day) as days_since_last_event,
-# count(*) over w2 total_events,
+# first_activity_date	
+# account_latest_MQL_date	
+# latest_mql_contact_id	
+# owner_name
+# job_scraping_date	
+# no_open_tech_roles
+# account_name
+# SQO	
+# Closed_Won	
+# SAL	
+# SAL_name	
+# sqo_date	
+# closed_won_date	
+# sal_date	
+# access	
+# access_date	
+# related_contact_id	
+# activity_date	
+# activity_owner	
+# first_activity_owner	
+# activity_subject	
+# call_duration	
+# event_type	
+# contact_last_mql_date
+# job_function
+# job_level
+# contact_disqualified_reason
+# disqualified_date	
+# disqualified_open_field
+# nurture_reason
+# nurture_date
+# nurture_open_field
+# contact_status	
+# related_contact_name	
+# is_usergem	
+# account_segment	
+# tech_vs_nontech	
+# most_recent_ivr	
+# most_recent_position_posted	
+# account_status	
+# m_access	
+# m_access_link	
+# m_account_link	
+# m_account_link_classic	
+# m_bucket	
+# m_call_duration	
+# m_contact_id	
+# m_contact_link	
+# m_cw_link	
+# m_cws	
+# m_first_activity_date_business_days	
+# m_ivr	
+# m_manager	
+# m_mql_contact_link	
+# m_position_posted	
+# m_sal	
+# m_sal_link	
+# m_sal_link_classic	
+# m_sqo	
+# m_sqo_link	
+# m_task_before_sal	
+# m_weekday_first_activity	
+# account_status_1
