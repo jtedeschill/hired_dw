@@ -1,0 +1,1204 @@
+[0m16:41:31.718213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c944c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ede230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ede380>]}
+
+
+============================== 16:41:31.721015 | c6ce86ea-482f-4252-a97b-9510138f82eb ==============================
+[0m16:41:31.721015 [info ] [MainThread]: Running with dbt=1.6.3
+[0m16:41:31.721363 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw/logs', 'debug': 'False', 'profiles_dir': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m16:41:33.409190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10597e4a0>]}
+[0m16:41:33.414408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1220ae3e0>]}
+[0m16:41:33.414943 [info ] [MainThread]: Registered adapter: bigquery=1.6.5
+[0m16:41:33.426466 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m16:41:33.433602 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m16:41:33.433978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1220ae440>]}
+[0m16:41:33.931370 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hired_dw.core
+[0m16:41:33.934344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122258490>]}
+[0m16:41:33.942378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1220c8940>]}
+[0m16:41:33.942707 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m16:41:33.943425 [info ] [MainThread]: 
+[0m16:41:33.943871 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:41:33.944428 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_hired-393411'
+[0m16:41:33.944615 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:41:34.684263 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hired-393411, now list_hired-393411_Hired)
+[0m16:41:34.685566 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:41:35.470890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1222dd7b0>]}
+[0m16:41:35.472417 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:41:35.473003 [info ] [MainThread]: 
+[0m16:41:35.477086 [debug] [Thread-1 (]: Began running node model.hired_dw.ob_tactical_metrics
+[0m16:41:35.478010 [info ] [Thread-1 (]: 1 of 1 START sql table model Hired.ob_tactical_metrics ......................... [RUN]
+[0m16:41:35.479205 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hired-393411_Hired, now model.hired_dw.ob_tactical_metrics)
+[0m16:41:35.479813 [debug] [Thread-1 (]: Began compiling node model.hired_dw.ob_tactical_metrics
+[0m16:41:35.493138 [debug] [Thread-1 (]: Writing injected SQL for node "model.hired_dw.ob_tactical_metrics"
+[0m16:41:35.495274 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (compile): 16:41:35.480183 => 16:41:35.494999
+[0m16:41:35.495772 [debug] [Thread-1 (]: Began executing node model.hired_dw.ob_tactical_metrics
+[0m16:41:35.518411 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:41:36.281104 [debug] [Thread-1 (]: Writing runtime sql for node "model.hired_dw.ob_tactical_metrics"
+[0m16:41:36.282710 [debug] [Thread-1 (]: On model.hired_dw.ob_tactical_metrics: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "hired_dw", "target_name": "dev", "node_id": "model.hired_dw.ob_tactical_metrics"} */
+
+  
+    
+
+    create or replace table `hired-393411`.`Hired`.`ob_tactical_metrics`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+WITH
+  Latest_MQL_Date AS (
+  SELECT
+    e.account_id,
+    MAX(e.event_date) OVER (PARTITION BY e.account_id) AS account_latest_MQL_date,
+    FIRST_VALUE(e.event_attribute_2) OVER (PARTITION BY e.account_id ORDER BY e.event_date DESC) AS mql_contact_id
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    e.account_id,
+    e.event_date,
+    e.event_attribute_2 ),
+  ContactActivities AS (
+  SELECT
+    e.account_id,
+    e.event_date AS activity_date,
+    e.event_attribute AS subject,
+    e.event_attribute_2 AS contact_id,
+  --  e.event_attribute_3 AS description,
+    e.event_attribute_4 AS activity_owner,
+    e.event_type
+  FROM
+    `hired-393411.Hired.engagement_events` e
+--  WHERE
+ --   e.event_type IN ('Call',
+ --     'Email',
+  --    'LinkedIn')
+ --   AND e.event_date >= '2023-07-01' 
+ ),
+  ContactLatestMQL AS (
+  SELECT
+    ca.contact_id,
+    MAX(e.event_date) AS contact_last_mql_date
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  JOIN
+    ContactActivities ca
+  ON
+    e.event_attribute_2 = ca.contact_id
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    ca.contact_id ),
+  Metrics AS (
+  SELECT
+    a.account_owner_name AS owner_name,
+    a.account_id AS worked_ob_accounts,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    act.contact_id AS related_contact_id,
+    act.activity_date,
+    act.subject AS activity_subject,
+    act.activity_owner,
+    act.event_type,
+  --  act.description,
+    cmql.contact_last_mql_date,
+    (EXTRACT(minute
+      FROM
+        PARSE_TIME('%T', REGEXP_EXTRACT(subject, '[0-9]+:[0-9]+:[0-9]+')))) AS call_duration,
+    MIN(act.activity_date) OVER (PARTITION BY a.account_id) AS first_activity_date,
+    MIN(act.activity_owner) OVER (PARTITION BY a.account_id) AS first_activity_owner,
+    MAX(e_sqo.event_attribute) AS SQO,
+    MAX(e_cw.event_attribute) AS Closed_Won,
+    MAX(e_sal.event_attribute) AS SAL,
+    MAX(e_sal.event_attribute_2) AS SAL_name,
+    MAX(e_sqo.event_date) AS sqo_date,
+    MAX(e_cw.event_date) AS closed_won_date,
+    MAX(e_sal.event_date) AS sal_date,
+    MAX(e_access.event_date) AS access_date,
+    MAX(e_access.event_attribute) AS ACCESS,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    CONCAT(sc.contact_first_name, ' ',sc.contact_last_name) AS related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.most_recent_ivr,
+    a.most_recent_position_posted,
+    CASE
+      WHEN a.industry_group = 'Software & Services' OR a.df_industry IN ('Internet Software & Services', 'Software') THEN 'Tech'
+    ELSE
+    'Non-Tech'
+  END
+    AS tech_vs_nontech
+  FROM
+    `hired-393411.Hired.calendar` cal
+  JOIN
+    `hired-393411.Hired.sfdc_account` a
+  ON
+    TRUE
+  LEFT JOIN
+    ContactActivities act
+  ON
+    a.account_id = act.account_id
+  LEFT JOIN
+    Latest_MQL_Date mql
+  ON
+    a.account_id = mql.account_id
+  LEFT JOIN
+    ContactLatestMQL cmql
+  ON
+    act.contact_id = cmql.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.sfdc_contact` sc
+  ON
+    act.contact_id = sc.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sqo
+  ON
+    a.account_id = e_sqo.account_id
+    AND e_sqo.event_type = 'SQO'
+    AND DATE(e_sqo.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_cw
+  ON
+    a.account_id = e_cw.account_id
+    AND e_cw.event_type = 'Closed Won'
+    AND DATE(e_cw.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sal
+  ON
+    a.account_id = e_sal.account_id
+    AND e_sal.event_type IN ('Subscription',
+      'Subscription - No Plan Type',
+      'Ignored')
+    AND DATE(e_sal.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_access
+  ON
+    a.account_id = e_access.account_id
+    AND e_access.event_type IN ('Access')
+    AND DATE(e_access.event_date) >= '2023-07-01'
+  WHERE
+    LOWER(a.account_owner_name) LIKE ANY ('%alex malti%',
+      '%brett crites%',
+      '%erica lloyd%',
+      '%greg garcia%',
+      '%jacqueline moncure%',
+      '%kevin parks%',
+      '%mea anton%',
+      '%sarah clancey%',
+      '%durham cox%',
+      'paul gopinathan')
+    AND (act.event_type IN ('Email',
+        'Call',
+        'LinkedIn'))
+    AND NOT EXISTS (
+    SELECT
+      1
+    FROM
+      `hired-393411.Hired.sales_dashboard_v2`
+    WHERE
+      account_id = a.account_id )
+  GROUP BY
+    a.account_owner_name,
+    a.account_id,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    act.contact_id,
+    act.activity_date,
+    act.activity_owner,
+    act.subject,
+  --  act.description,
+    act.event_type,
+    cmql.contact_last_mql_date,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.industry_group,
+    a.df_industry,
+    a.most_recent_ivr,
+    a.most_recent_position_posted )
+, final as (
+SELECT
+  m.worked_ob_accounts AS account_id,
+  m.first_activity_date,
+  m.account_latest_MQL_date,
+  m.mql_contact_id AS latest_mql_contact_id,
+  m.owner_name,
+  m.job_scraping_date,
+  m.no_open_tech_roles,
+  m.account_name,
+  m.SQO,
+  m.Closed_Won,
+  m.SAL,
+  m.SAL_name,
+  m.sqo_date,
+  m.closed_won_date,
+  m.sal_date,
+  m.access,
+  m.access_date,
+  m.related_contact_id,
+  m.activity_date,
+  m.activity_owner,
+  m.first_activity_owner,
+  m.activity_subject,
+--  m.description,
+  m.call_duration,
+  m.event_type,
+  m.contact_last_mql_date,
+  m.job_function,
+  m.job_level,
+  m.contact_disqualified_reason,
+  m.disqualified_date,
+  m.disqualified_open_field,
+  m.nurture_reason,
+  m.nurture_date,
+  m.nurture_open_field,
+  m.contact_status,
+  m.related_contact_name,
+  m.is_usergem,
+  m.account_segment,
+  m.tech_vs_nontech,
+  m.most_recent_ivr,
+  m.most_recent_position_posted,
+  CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = m.worked_ob_accounts
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status
+FROM
+  Metrics AS m
+WHERE
+  (DATE_DIFF(m.first_activity_date, m.account_latest_MQL_date, DAY) >= 90
+    OR m.account_latest_MQL_date IS NULL)
+ORDER BY
+  m.worked_ob_accounts,
+  m.activity_date,
+  m.owner_name)
+
+SELECT
+f.*
+,CASE WHEN f.access_date >= f.first_activity_date THEN account_id END AS m_access
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.access,'/view',f.access) as m_access_link
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.account_id,'/view',f.account_id) as m_account_link 
+,CONCAT('https://hired.my.salesforce.com/',f.account_id,'?srPos=0&srKp=001',f.account_name) as m_account_link_classic 
+,CASE 
+	WHEN f.job_scraping_date is not null and f.account_latest_MQL_date is not null then 'Past MQL + Hiring Signal'
+    WHEN f.job_scraping_date is not null then 'Hiring Signal'
+    ELSE 'Other Outbound'
+END as m_bucket
+,((PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '\\[([0-9]{2}):')) * 3600) +
+(PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '([0-9]{2})\\]')) * 60) +
+PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject,':[0-9]{2}:([0-9]{2})'))) 
+AS m_call_duration
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.related_contact_id,'/view',f.related_contact_id) as m_contact_id
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.related_contact_id,'/view',f.related_contact_name) as m_contact_link
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.Closed_Won,'/view',f.Closed_Won) as m_cw_link 
+,CASE WHEN closed_won_date >= first_activity_date THEN account_id END as m_cws 
+,CASE 
+  WHEN EXTRACT(DAYOFWEEK FROM first_activity_date) >= 2 AND EXTRACT(DAYOFWEEK FROM first_activity_date) <= 6 THEN first_activity_date
+  ELSE NULL
+END m_first_activity_date_business_days 
+,CASE WHEN most_recent_ivr >= first_activity_date THEN account_id END AS m_ivr 
+,CASE 
+        WHEN owner_name = 'Casino Rojas' THEN 'Akit Mistry'
+        WHEN owner_name = 'Dariush (deact) Morid' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jamair Atkins (Deact)' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jessica (deact) Berestecki' THEN 'Sam Swatski'
+        WHEN owner_name = 'Tyler (deact) Pullen' THEN 'Sam Swatski'
+        WHEN owner_name = 'Talisha (deact) Brown' THEN 'Sam Swatski'
+        WHEN owner_name = 'John (Deact) Park Narron' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rob Cicek' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rebecca (deact) Ramsden' THEN 'Akit Mistry'
+        WHEN owner_name = 'Christopher (deact) Monk' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sophia Collins' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kellie Wragg' THEN 'Akit Mistry'
+        WHEN owner_name = 'Durham Cox' THEN 'Akit Mistry'
+        WHEN owner_name = 'Bryce Flocks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Caleb Heck' THEN 'Sam Swatski'
+        WHEN owner_name = 'Sarah Clancey' THEN 'Akit Mistry'
+        WHEN owner_name = 'Mea Anton' THEN 'Akit Mistry'
+        WHEN owner_name = 'Greg Garcia' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sam Swatski' THEN 'Akit Mistry'
+        WHEN owner_name = 'Erica Lloyd' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kevin Parks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Jacqueline Moncure' THEN 'Sam Swatski'
+        WHEN owner_name = 'Brett Crites' THEN 'Sam Swatski'
+        WHEN owner_name = 'Alex Malti' THEN 'Sam Swatski'
+        WHEN owner_name = 'Paul Gopinathan' THEN 'Akit Mistry'
+        ELSE 'Unknown Manager'
+    END 
+  AS m_manager 
+  ,concat('https://hired.lightning.force.com/lightning/r/Contact/',f.latest_mql_contact_id,'/view',f.latest_mql_contact_id) as m_mql_contact_link 
+  ,CASE WHEN most_recent_position_posted >= first_activity_date THEN account_id END as m_position_posted 
+  ,CASE WHEN sal_date >= first_activity_date THEN account_id END as m_sal 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SAL,'/view',f.SAL) as m_sal_link 
+  ,CONCAT('https://hired.my.salesforce.com/',SAL,'?srPos=0&srKp=001',SAL_name) as m_sal_link_classic 
+  ,CASE WHEN sqo_date >= first_activity_date THEN account_id END as m_sqo 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SQO,'/view',f.SQO) as m_sqo_link
+  ,CASE WHEN (date_diff(date(activity_date),date(sal_date),DAY) <0 OR sal_date IS NULL) THEN TRUE ELSE FALSE END  m_task_before_sal
+  ,EXTRACT(DAYOFWEEK FROM first_activity_date) AS m_weekday_first_activity 
+  ,CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = f.account_id
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status_1
+FROM FINAL f
+    );
+  
+[0m16:41:36.987296 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=hired-393411&j=bq:US:78821841-66a2-49ad-b1e1-7b14b7830d6e&page=queryresults
+[0m16:42:02.424893 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (execute): 16:41:35.496196 => 16:42:02.424458
+[0m16:42:02.427375 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c6ce86ea-482f-4252-a97b-9510138f82eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1223e8310>]}
+[0m16:42:02.428475 [info ] [Thread-1 (]: 1 of 1 OK created sql table model Hired.ob_tactical_metrics .................... [[32mCREATE TABLE (145.3k rows, 196.2 MiB processed)[0m in 26.95s]
+[0m16:42:02.429254 [debug] [Thread-1 (]: Finished running node model.hired_dw.ob_tactical_metrics
+[0m16:42:02.431679 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:42:02.432063 [debug] [MainThread]: Connection 'model.hired_dw.ob_tactical_metrics' was properly closed.
+[0m16:42:02.432410 [info ] [MainThread]: 
+[0m16:42:02.432797 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 28.49 seconds (28.49s).
+[0m16:42:02.433621 [debug] [MainThread]: Command end result
+[0m16:42:02.446414 [info ] [MainThread]: 
+[0m16:42:02.447217 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:42:02.447561 [info ] [MainThread]: 
+[0m16:42:02.447938 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:42:02.451879 [debug] [MainThread]: Command `dbt build` succeeded at 16:42:02.451744 after 30.76 seconds
+[0m16:42:02.452574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c944c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1220c8940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122258490>]}
+[0m16:42:02.452901 [debug] [MainThread]: Flushing usage events
+[0m19:55:55.710381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102dfc4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105696140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1056962f0>]}
+
+
+============================== 19:55:55.713269 | 3ae501db-2a82-4f9a-a416-541ee7485e7b ==============================
+[0m19:55:55.713269 [info ] [MainThread]: Running with dbt=1.6.3
+[0m19:55:55.713671 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:55:56.347234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103ae64a0>]}
+[0m19:55:56.352757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ffb0100>]}
+[0m19:55:56.353317 [info ] [MainThread]: Registered adapter: bigquery=1.6.5
+[0m19:55:56.366100 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m19:55:56.392034 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m19:55:56.392512 [debug] [MainThread]: Partial parsing: updated file: hired_dw://models/staging/schema.yml
+[0m19:55:56.438555 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hired_dw.core
+[0m19:55:56.441874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c2cfeb0>]}
+[0m19:55:56.450614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c26fd90>]}
+[0m19:55:56.451035 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m19:55:56.451261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c26fdf0>]}
+[0m19:55:56.452002 [info ] [MainThread]: 
+[0m19:55:56.452433 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m19:55:56.453000 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_hired-393411'
+[0m19:55:56.453188 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:55:58.214832 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hired-393411, now list_hired-393411_Hired)
+[0m19:55:58.215872 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:55:58.866285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c26e410>]}
+[0m19:55:58.867647 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:55:58.868214 [info ] [MainThread]: 
+[0m19:55:58.872417 [debug] [Thread-1 (]: Began running node model.hired_dw.ob_tactical_metrics
+[0m19:55:58.873364 [info ] [Thread-1 (]: 1 of 1 START sql table model Hired.ob_tactical_metrics ......................... [RUN]
+[0m19:55:58.874271 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hired-393411_Hired, now model.hired_dw.ob_tactical_metrics)
+[0m19:55:58.874782 [debug] [Thread-1 (]: Began compiling node model.hired_dw.ob_tactical_metrics
+[0m19:55:58.894071 [debug] [Thread-1 (]: Writing injected SQL for node "model.hired_dw.ob_tactical_metrics"
+[0m19:55:58.895987 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (compile): 19:55:58.875121 => 19:55:58.895766
+[0m19:55:58.896381 [debug] [Thread-1 (]: Began executing node model.hired_dw.ob_tactical_metrics
+[0m19:55:58.911443 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:55:59.618619 [debug] [Thread-1 (]: Writing runtime sql for node "model.hired_dw.ob_tactical_metrics"
+[0m19:55:59.621012 [debug] [Thread-1 (]: On model.hired_dw.ob_tactical_metrics: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "hired_dw", "target_name": "dev", "node_id": "model.hired_dw.ob_tactical_metrics"} */
+
+  
+    
+
+    create or replace table `hired-393411`.`Hired`.`ob_tactical_metrics`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+WITH
+  Latest_MQL_Date AS (
+  SELECT
+    e.account_id,
+    MAX(e.event_date) OVER (PARTITION BY e.account_id) AS account_latest_MQL_date,
+    FIRST_VALUE(e.event_attribute_2) OVER (PARTITION BY e.account_id ORDER BY e.event_date DESC) AS mql_contact_id
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    e.account_id,
+    e.event_date,
+    e.event_attribute_2 ),
+  ContactActivities AS (
+  SELECT
+    e.account_id,
+    e.event_date AS activity_date,
+    e.event_attribute AS subject,
+    e.event_attribute_2 AS contact_id,
+  --  e.event_attribute_3 AS description,
+    e.event_attribute_4 AS activity_owner,
+    e.event_type
+  FROM
+    `hired-393411.Hired.engagement_events` e
+--  WHERE
+ --   e.event_type IN ('Call',
+ --     'Email',
+  --    'LinkedIn')
+ --   AND e.event_date >= '2023-07-01' 
+ ),
+  ContactLatestMQL AS (
+  SELECT
+    ca.contact_id,
+    MAX(e.event_date) AS contact_last_mql_date
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  JOIN
+    ContactActivities ca
+  ON
+    e.event_attribute_2 = ca.contact_id
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    ca.contact_id ),
+  Metrics AS (
+  SELECT
+    a.account_owner_name AS owner_name,
+    a.account_id AS worked_ob_accounts,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    act.contact_id AS related_contact_id,
+    act.activity_date,
+    act.subject AS activity_subject,
+    act.activity_owner,
+    act.event_type,
+  --  act.description,
+    cmql.contact_last_mql_date,
+    (EXTRACT(minute
+      FROM
+        PARSE_TIME('%T', REGEXP_EXTRACT(subject, '[0-9]+:[0-9]+:[0-9]+')))) AS call_duration,
+    MIN(act.activity_date) OVER (PARTITION BY a.account_id) AS first_activity_date,
+    MIN(act.activity_owner) OVER (PARTITION BY a.account_id) AS first_activity_owner,
+    MAX(e_sqo.event_attribute) AS SQO,
+    MAX(e_cw.event_attribute) AS Closed_Won,
+    MAX(e_sal.event_attribute) AS SAL,
+    MAX(e_sal.event_attribute_2) AS SAL_name,
+    MAX(e_sqo.event_date) AS sqo_date,
+    MAX(e_cw.event_date) AS closed_won_date,
+    MAX(e_sal.event_date) AS sal_date,
+    MAX(e_access.event_date) AS access_date,
+    MAX(e_access.event_attribute) AS ACCESS,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    CONCAT(sc.contact_first_name, ' ',sc.contact_last_name) AS related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.most_recent_ivr,
+    a.most_recent_position_posted,
+    CASE
+      WHEN a.industry_group = 'Software & Services' OR a.df_industry IN ('Internet Software & Services', 'Software') THEN 'Tech'
+    ELSE
+    'Non-Tech'
+  END
+    AS tech_vs_nontech
+  FROM
+    `hired-393411.Hired.calendar` cal
+  JOIN
+    `hired-393411.Hired.sfdc_account` a
+  ON
+    TRUE
+  LEFT JOIN
+    ContactActivities act
+  ON
+    a.account_id = act.account_id
+  LEFT JOIN
+    Latest_MQL_Date mql
+  ON
+    a.account_id = mql.account_id
+  LEFT JOIN
+    ContactLatestMQL cmql
+  ON
+    act.contact_id = cmql.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.sfdc_contact` sc
+  ON
+    act.contact_id = sc.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sqo
+  ON
+    a.account_id = e_sqo.account_id
+    AND e_sqo.event_type = 'SQO'
+    AND DATE(e_sqo.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_cw
+  ON
+    a.account_id = e_cw.account_id
+    AND e_cw.event_type = 'Closed Won'
+    AND DATE(e_cw.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sal
+  ON
+    a.account_id = e_sal.account_id
+    AND e_sal.event_type IN ('Subscription',
+      'Subscription - No Plan Type',
+      'Ignored')
+    AND DATE(e_sal.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_access
+  ON
+    a.account_id = e_access.account_id
+    AND e_access.event_type IN ('Access')
+    AND DATE(e_access.event_date) >= '2023-07-01'
+  WHERE
+    LOWER(a.account_owner_name) LIKE ANY ('%alex malti%',
+      '%brett crites%',
+      '%erica lloyd%',
+      '%greg garcia%',
+      '%jacqueline moncure%',
+      '%kevin parks%',
+      '%mea anton%',
+      '%sarah clancey%',
+      '%durham cox%',
+      'paul gopinathan')
+    AND (act.event_type IN ('Email',
+        'Call',
+        'LinkedIn'))
+    AND NOT EXISTS (
+    SELECT
+      1
+    FROM
+      `hired-393411.Hired.sales_dashboard_v2`
+    WHERE
+      account_id = a.account_id )
+  GROUP BY
+    a.account_owner_name,
+    a.account_id,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    act.contact_id,
+    act.activity_date,
+    act.activity_owner,
+    act.subject,
+  --  act.description,
+    act.event_type,
+    cmql.contact_last_mql_date,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.industry_group,
+    a.df_industry,
+    a.most_recent_ivr,
+    a.most_recent_position_posted )
+, final as (
+SELECT
+  m.worked_ob_accounts AS account_id,
+  m.first_activity_date,
+  m.account_latest_MQL_date,
+  m.mql_contact_id AS latest_mql_contact_id,
+  m.owner_name,
+  m.job_scraping_date,
+  m.no_open_tech_roles,
+  m.account_name,
+  m.SQO,
+  m.Closed_Won,
+  m.SAL,
+  m.SAL_name,
+  m.sqo_date,
+  m.closed_won_date,
+  m.sal_date,
+  m.access,
+  m.access_date,
+  m.related_contact_id,
+  m.activity_date,
+  m.activity_owner,
+  m.first_activity_owner,
+  m.activity_subject,
+--  m.description,
+  m.call_duration,
+  m.event_type,
+  m.contact_last_mql_date,
+  m.job_function,
+  m.job_level,
+  m.contact_disqualified_reason,
+  m.disqualified_date,
+  m.disqualified_open_field,
+  m.nurture_reason,
+  m.nurture_date,
+  m.nurture_open_field,
+  m.contact_status,
+  m.related_contact_name,
+  m.is_usergem,
+  m.account_segment,
+  m.tech_vs_nontech,
+  m.most_recent_ivr,
+  m.most_recent_position_posted,
+  CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = m.worked_ob_accounts
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status
+FROM
+  Metrics AS m
+WHERE
+  (DATE_DIFF(m.first_activity_date, m.account_latest_MQL_date, DAY) >= 90
+    OR m.account_latest_MQL_date IS NULL)
+ORDER BY
+  m.worked_ob_accounts,
+  m.activity_date,
+  m.owner_name)
+
+SELECT
+f.*
+,CASE WHEN f.access_date >= f.first_activity_date THEN account_id END AS m_access
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.access,'/view',f.access) as m_access_link
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.account_id,'/view',f.account_id) as m_account_link 
+,CONCAT('https://hired.my.salesforce.com/',f.account_id,'?srPos=0&srKp=001',f.account_name) as m_account_link_classic 
+,CASE 
+	WHEN f.job_scraping_date is not null and f.account_latest_MQL_date is not null then 'Past MQL + Hiring Signal'
+    WHEN f.job_scraping_date is not null then 'Hiring Signal'
+    ELSE 'Other Outbound'
+END as m_bucket
+,((PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '\\[([0-9]{2}):')) * 3600) +
+(PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '([0-9]{2})\\]')) * 60) +
+PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject,':[0-9]{2}:([0-9]{2})'))) 
+AS m_call_duration
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.related_contact_id,'/view',f.related_contact_id) as m_contact_id
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.related_contact_id,'/view',f.related_contact_name) as m_contact_link
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.Closed_Won,'/view',f.Closed_Won) as m_cw_link 
+,CASE WHEN closed_won_date >= first_activity_date THEN account_id END as m_cws 
+,CASE 
+  WHEN EXTRACT(DAYOFWEEK FROM first_activity_date) >= 2 AND EXTRACT(DAYOFWEEK FROM first_activity_date) <= 6 THEN first_activity_date
+  ELSE NULL
+END m_first_activity_date_business_days 
+,CASE WHEN most_recent_ivr >= first_activity_date THEN account_id END AS m_ivr 
+,CASE 
+        WHEN owner_name = 'Casino Rojas' THEN 'Akit Mistry'
+        WHEN owner_name = 'Dariush (deact) Morid' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jamair Atkins (Deact)' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jessica (deact) Berestecki' THEN 'Sam Swatski'
+        WHEN owner_name = 'Tyler (deact) Pullen' THEN 'Sam Swatski'
+        WHEN owner_name = 'Talisha (deact) Brown' THEN 'Sam Swatski'
+        WHEN owner_name = 'John (Deact) Park Narron' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rob Cicek' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rebecca (deact) Ramsden' THEN 'Akit Mistry'
+        WHEN owner_name = 'Christopher (deact) Monk' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sophia Collins' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kellie Wragg' THEN 'Akit Mistry'
+        WHEN owner_name = 'Durham Cox' THEN 'Akit Mistry'
+        WHEN owner_name = 'Bryce Flocks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Caleb Heck' THEN 'Sam Swatski'
+        WHEN owner_name = 'Sarah Clancey' THEN 'Akit Mistry'
+        WHEN owner_name = 'Mea Anton' THEN 'Akit Mistry'
+        WHEN owner_name = 'Greg Garcia' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sam Swatski' THEN 'Akit Mistry'
+        WHEN owner_name = 'Erica Lloyd' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kevin Parks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Jacqueline Moncure' THEN 'Sam Swatski'
+        WHEN owner_name = 'Brett Crites' THEN 'Sam Swatski'
+        WHEN owner_name = 'Alex Malti' THEN 'Sam Swatski'
+        WHEN owner_name = 'Paul Gopinathan' THEN 'Akit Mistry'
+        ELSE 'Unknown Manager'
+    END 
+  AS m_manager 
+  ,concat('https://hired.lightning.force.com/lightning/r/Contact/',f.latest_mql_contact_id,'/view',f.latest_mql_contact_id) as m_mql_contact_link 
+  ,CASE WHEN most_recent_position_posted >= first_activity_date THEN account_id END as m_position_posted 
+  ,CASE WHEN sal_date >= first_activity_date THEN account_id END as m_sal 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SAL,'/view',f.SAL) as m_sal_link 
+  ,CONCAT('https://hired.my.salesforce.com/',SAL,'?srPos=0&srKp=001',SAL_name) as m_sal_link_classic 
+  ,CASE WHEN sqo_date >= first_activity_date THEN account_id END as m_sqo 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SQO,'/view',f.SQO) as m_sqo_link
+  ,CASE WHEN (date_diff(date(activity_date),date(sal_date),DAY) <0 OR sal_date IS NULL) THEN TRUE ELSE FALSE END  m_task_before_sal
+  ,EXTRACT(DAYOFWEEK FROM first_activity_date) AS m_weekday_first_activity 
+  ,CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = f.account_id
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status_1
+FROM FINAL f
+    );
+  
+[0m19:56:00.399717 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=hired-393411&j=bq:US:6426680f-da13-4655-8371-4e3ed1a443d7&page=queryresults
+[0m19:57:03.307058 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (execute): 19:55:58.896644 => 19:57:03.306626
+[0m19:57:03.309933 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3ae501db-2a82-4f9a-a416-541ee7485e7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c2cdae0>]}
+[0m19:57:03.310964 [info ] [Thread-1 (]: 1 of 1 OK created sql table model Hired.ob_tactical_metrics .................... [[32mCREATE TABLE (145.3k rows, 196.2 MiB processed)[0m in 64.44s]
+[0m19:57:03.311802 [debug] [Thread-1 (]: Finished running node model.hired_dw.ob_tactical_metrics
+[0m19:57:03.314761 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:57:03.315227 [debug] [MainThread]: Connection 'model.hired_dw.ob_tactical_metrics' was properly closed.
+[0m19:57:03.315589 [info ] [MainThread]: 
+[0m19:57:03.315989 [info ] [MainThread]: Finished running 1 table model in 0 hours 1 minutes and 6.86 seconds (66.86s).
+[0m19:57:03.316823 [debug] [MainThread]: Command end result
+[0m19:57:03.343348 [info ] [MainThread]: 
+[0m19:57:03.343937 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:57:03.344192 [info ] [MainThread]: 
+[0m19:57:03.344576 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:57:03.346380 [debug] [MainThread]: Command `dbt run` succeeded at 19:57:03.346206 after 67.65 seconds
+[0m19:57:03.347087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102dfc4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ffb0100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c29bdc0>]}
+[0m19:57:03.347484 [debug] [MainThread]: Flushing usage events
+[0m20:35:29.912460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112396170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1123962c0>]}
+
+
+============================== 20:35:29.915195 | 0b4d0656-627c-463f-b0ef-ad3fe051611c ==============================
+[0m20:35:29.915195 [info ] [MainThread]: Running with dbt=1.6.3
+[0m20:35:29.915569 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw/logs', 'version_check': 'True', 'profiles_dir': '/Users/joaotedeschi/Projects/leanlayer/hired_dw/fast_dw', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:35:31.662752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110af2680>]}
+[0m20:35:31.667923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1448af3a0>]}
+[0m20:35:31.668434 [info ] [MainThread]: Registered adapter: bigquery=1.6.5
+[0m20:35:31.680152 [debug] [MainThread]: checksum: 800ab10c53db38b54e69cd328777f0c48b6374b8a89466e8ff54aa9acb452b75, vars: {}, profile: , target: , version: 1.6.3
+[0m20:35:31.709348 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:35:31.709623 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:35:31.709937 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.hired_dw.core
+[0m20:35:31.752797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144bb3fd0>]}
+[0m20:35:31.762169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144b8f2b0>]}
+[0m20:35:31.762470 [info ] [MainThread]: Found 1 model, 0 sources, 0 exposures, 0 metrics, 390 macros, 0 groups, 0 semantic models
+[0m20:35:31.763172 [info ] [MainThread]: 
+[0m20:35:31.763592 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:35:31.764144 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_hired-393411'
+[0m20:35:31.764362 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:35:32.571617 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_hired-393411, now list_hired-393411_Hired)
+[0m20:35:32.572210 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:35:33.254918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144b8dd50>]}
+[0m20:35:33.255905 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:35:33.256299 [info ] [MainThread]: 
+[0m20:35:33.259255 [debug] [Thread-1 (]: Began running node model.hired_dw.ob_tactical_metrics
+[0m20:35:33.259897 [info ] [Thread-1 (]: 1 of 1 START sql table model Hired.ob_tactical_metrics ......................... [RUN]
+[0m20:35:33.260637 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_hired-393411_Hired, now model.hired_dw.ob_tactical_metrics)
+[0m20:35:33.261018 [debug] [Thread-1 (]: Began compiling node model.hired_dw.ob_tactical_metrics
+[0m20:35:33.275800 [debug] [Thread-1 (]: Writing injected SQL for node "model.hired_dw.ob_tactical_metrics"
+[0m20:35:33.278347 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (compile): 20:35:33.261273 => 20:35:33.278056
+[0m20:35:33.278760 [debug] [Thread-1 (]: Began executing node model.hired_dw.ob_tactical_metrics
+[0m20:35:33.291122 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:35:34.021912 [debug] [Thread-1 (]: Writing runtime sql for node "model.hired_dw.ob_tactical_metrics"
+[0m20:35:34.023501 [debug] [Thread-1 (]: On model.hired_dw.ob_tactical_metrics: /* {"app": "dbt", "dbt_version": "1.6.3", "profile_name": "hired_dw", "target_name": "dev", "node_id": "model.hired_dw.ob_tactical_metrics"} */
+
+  
+    
+
+    create or replace table `hired-393411`.`Hired`.`ob_tactical_metrics`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+WITH
+  Latest_MQL_Date AS (
+  SELECT
+    e.account_id,
+    MAX(e.event_date) OVER (PARTITION BY e.account_id) AS account_latest_MQL_date,
+    FIRST_VALUE(e.event_attribute_2) OVER (PARTITION BY e.account_id ORDER BY e.event_date DESC) AS mql_contact_id
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    e.account_id,
+    e.event_date,
+    e.event_attribute_2 ),
+  ContactActivities AS (
+  SELECT
+    e.account_id,
+    e.event_date AS activity_date,
+    e.event_attribute AS subject,
+    e.event_attribute_2 AS contact_id,
+  --  e.event_attribute_3 AS description,
+    e.event_attribute_4 AS activity_owner,
+    e.event_type
+  FROM
+    `hired-393411.Hired.engagement_events` e
+--  WHERE
+ --   e.event_type IN ('Call',
+ --     'Email',
+  --    'LinkedIn')
+ --   AND e.event_date >= '2023-07-01' 
+ ),
+  ContactLatestMQL AS (
+  SELECT
+    ca.contact_id,
+    MAX(e.event_date) AS contact_last_mql_date
+  FROM
+    `hired-393411.Hired.engagement_events` e
+  JOIN
+    ContactActivities ca
+  ON
+    e.event_attribute_2 = ca.contact_id
+  WHERE
+    e.event_type = 'MQL'
+  GROUP BY
+    ca.contact_id ),
+  Metrics AS (
+  SELECT
+    a.account_owner_name AS owner_name,
+    a.account_id AS worked_ob_accounts,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    act.contact_id AS related_contact_id,
+    act.activity_date,
+    act.subject AS activity_subject,
+    act.activity_owner,
+    act.event_type,
+  --  act.description,
+    cmql.contact_last_mql_date,
+    (EXTRACT(minute
+      FROM
+        PARSE_TIME('%T', REGEXP_EXTRACT(subject, '[0-9]+:[0-9]+:[0-9]+')))) AS call_duration,
+    MIN(act.activity_date) OVER (PARTITION BY a.account_id) AS first_activity_date,
+    MIN(act.activity_owner) OVER (PARTITION BY a.account_id) AS first_activity_owner,
+    MAX(e_sqo.event_attribute) AS SQO,
+    MAX(e_cw.event_attribute) AS Closed_Won,
+    MAX(e_sal.event_attribute) AS SAL,
+    MAX(e_sal.event_attribute_2) AS SAL_name,
+    MAX(e_sqo.event_date) AS sqo_date,
+    MAX(e_cw.event_date) AS closed_won_date,
+    MAX(e_sal.event_date) AS sal_date,
+    MAX(e_access.event_date) AS access_date,
+    MAX(e_access.event_attribute) AS ACCESS,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    CONCAT(sc.contact_first_name, ' ',sc.contact_last_name) AS related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.most_recent_ivr,
+    a.most_recent_position_posted,
+    CASE
+      WHEN a.industry_group = 'Software & Services' OR a.df_industry IN ('Internet Software & Services', 'Software') THEN 'Tech'
+    ELSE
+    'Non-Tech'
+  END
+    AS tech_vs_nontech
+  FROM
+    `hired-393411.Hired.calendar` cal
+  JOIN
+    `hired-393411.Hired.sfdc_account` a
+  ON
+    TRUE
+  LEFT JOIN
+    ContactActivities act
+  ON
+    a.account_id = act.account_id
+  LEFT JOIN
+    Latest_MQL_Date mql
+  ON
+    a.account_id = mql.account_id
+  LEFT JOIN
+    ContactLatestMQL cmql
+  ON
+    act.contact_id = cmql.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.sfdc_contact` sc
+  ON
+    act.contact_id = sc.contact_id
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sqo
+  ON
+    a.account_id = e_sqo.account_id
+    AND e_sqo.event_type = 'SQO'
+    AND DATE(e_sqo.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_cw
+  ON
+    a.account_id = e_cw.account_id
+    AND e_cw.event_type = 'Closed Won'
+    AND DATE(e_cw.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_sal
+  ON
+    a.account_id = e_sal.account_id
+    AND e_sal.event_type IN ('Subscription',
+      'Subscription - No Plan Type',
+      'Ignored')
+    AND DATE(e_sal.event_date) >= '2023-07-01'
+  LEFT JOIN
+    `hired-393411.Hired.engagement_events` e_access
+  ON
+    a.account_id = e_access.account_id
+    AND e_access.event_type IN ('Access')
+    AND DATE(e_access.event_date) >= '2023-07-01'
+  WHERE
+    LOWER(a.account_owner_name) LIKE ANY ('%alex malti%',
+      '%brett crites%',
+      '%erica lloyd%',
+      '%greg garcia%',
+      '%jacqueline moncure%',
+      '%kevin parks%',
+      '%mea anton%',
+      '%sarah clancey%',
+      '%durham cox%',
+      'paul gopinathan')
+    AND (act.event_type IN ('Email',
+        'Call',
+        'LinkedIn'))
+    AND NOT EXISTS (
+    SELECT
+      1
+    FROM
+      `hired-393411.Hired.sales_dashboard_v2`
+    WHERE
+      account_id = a.account_id )
+  GROUP BY
+    a.account_owner_name,
+    a.account_id,
+    mql.account_latest_MQL_date,
+    mql.mql_contact_id,
+    a.job_scraping_date,
+    a.no_open_tech_roles,
+    a.account_name,
+    act.contact_id,
+    act.activity_date,
+    act.activity_owner,
+    act.subject,
+  --  act.description,
+    act.event_type,
+    cmql.contact_last_mql_date,
+    sc.job_function,
+    sc.job_level,
+    sc.contact_disqualified_reason,
+    sc.disqualified_date,
+    sc.disqualified_open_field,
+    sc.nurture_reason,
+    sc.nurture_date,
+    sc.nurture_open_field,
+    sc.contact_status,
+    related_contact_name,
+    sc.is_usergem,
+    a.account_segment,
+    a.industry_group,
+    a.df_industry,
+    a.most_recent_ivr,
+    a.most_recent_position_posted )
+, final as (
+SELECT
+  m.worked_ob_accounts AS account_id,
+  m.first_activity_date,
+  m.account_latest_MQL_date,
+  m.mql_contact_id AS latest_mql_contact_id,
+  m.owner_name,
+  m.job_scraping_date,
+  m.no_open_tech_roles,
+  m.account_name,
+  m.SQO,
+  m.Closed_Won,
+  m.SAL,
+  m.SAL_name,
+  m.sqo_date,
+  m.closed_won_date,
+  m.sal_date,
+  m.access,
+  m.access_date,
+  m.related_contact_id,
+  m.activity_date,
+  m.activity_owner,
+  m.first_activity_owner,
+  m.activity_subject,
+--  m.description,
+  m.call_duration,
+  m.event_type,
+  m.contact_last_mql_date,
+  m.job_function,
+  m.job_level,
+  m.contact_disqualified_reason,
+  m.disqualified_date,
+  m.disqualified_open_field,
+  m.nurture_reason,
+  m.nurture_date,
+  m.nurture_open_field,
+  m.contact_status,
+  m.related_contact_name,
+  m.is_usergem,
+  m.account_segment,
+  m.tech_vs_nontech,
+  m.most_recent_ivr,
+  m.most_recent_position_posted,
+  CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = m.worked_ob_accounts
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status
+FROM
+  Metrics AS m
+WHERE
+  (DATE_DIFF(m.first_activity_date, m.account_latest_MQL_date, DAY) >= 90
+    OR m.account_latest_MQL_date IS NULL)
+ORDER BY
+  m.worked_ob_accounts,
+  m.activity_date,
+  m.owner_name)
+
+SELECT
+f.*
+,CASE WHEN f.access_date >= f.first_activity_date THEN account_id END AS m_access
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.access,'/view',f.access) as m_access_link
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.account_id,'/view',f.account_id) as m_account_link 
+,CONCAT('https://hired.my.salesforce.com/',f.account_id,'?srPos=0&srKp=001',f.account_name) as m_account_link_classic 
+,CASE 
+	WHEN f.job_scraping_date is not null and f.account_latest_MQL_date is not null then 'Past MQL + Hiring Signal'
+    WHEN f.job_scraping_date is not null then 'Hiring Signal'
+    ELSE 'Other Outbound'
+END as m_bucket
+,((PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '\\[([0-9]{2}):')) * 3600) +
+(PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject, '([0-9]{2})\\]')) * 60) +
+PARSE_NUMERIC(REGEXP_EXTRACT(activity_subject,':[0-9]{2}:([0-9]{2})'))) 
+AS m_call_duration
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.related_contact_id,'/view',f.related_contact_id) as m_contact_id
+,concat('https://hired.lightning.force.com/lightning/r/Account/',f.related_contact_id,'/view',f.related_contact_name) as m_contact_link
+,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.Closed_Won,'/view',f.Closed_Won) as m_cw_link 
+,CASE WHEN closed_won_date >= first_activity_date THEN account_id END as m_cws 
+,CASE 
+  WHEN EXTRACT(DAYOFWEEK FROM first_activity_date) >= 2 AND EXTRACT(DAYOFWEEK FROM first_activity_date) <= 6 THEN first_activity_date
+  ELSE NULL
+END m_first_activity_date_business_days 
+,CASE WHEN most_recent_ivr >= first_activity_date THEN account_id END AS m_ivr 
+,CASE 
+        WHEN owner_name = 'Casino Rojas' THEN 'Akit Mistry'
+        WHEN owner_name = 'Dariush (deact) Morid' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jamair Atkins (Deact)' THEN 'Akit Mistry'
+        WHEN owner_name = 'Jessica (deact) Berestecki' THEN 'Sam Swatski'
+        WHEN owner_name = 'Tyler (deact) Pullen' THEN 'Sam Swatski'
+        WHEN owner_name = 'Talisha (deact) Brown' THEN 'Sam Swatski'
+        WHEN owner_name = 'John (Deact) Park Narron' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rob Cicek' THEN 'Sam Swatski'
+        WHEN owner_name = 'Rebecca (deact) Ramsden' THEN 'Akit Mistry'
+        WHEN owner_name = 'Christopher (deact) Monk' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sophia Collins' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kellie Wragg' THEN 'Akit Mistry'
+        WHEN owner_name = 'Durham Cox' THEN 'Akit Mistry'
+        WHEN owner_name = 'Bryce Flocks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Caleb Heck' THEN 'Sam Swatski'
+        WHEN owner_name = 'Sarah Clancey' THEN 'Akit Mistry'
+        WHEN owner_name = 'Mea Anton' THEN 'Akit Mistry'
+        WHEN owner_name = 'Greg Garcia' THEN 'Akit Mistry'
+        WHEN owner_name = 'Sam Swatski' THEN 'Akit Mistry'
+        WHEN owner_name = 'Erica Lloyd' THEN 'Akit Mistry'
+        WHEN owner_name = 'Kevin Parks' THEN 'Sam Swatski'
+        WHEN owner_name = 'Jacqueline Moncure' THEN 'Sam Swatski'
+        WHEN owner_name = 'Brett Crites' THEN 'Sam Swatski'
+        WHEN owner_name = 'Alex Malti' THEN 'Sam Swatski'
+        WHEN owner_name = 'Paul Gopinathan' THEN 'Akit Mistry'
+        ELSE 'Unknown Manager'
+    END 
+  AS m_manager 
+  ,concat('https://hired.lightning.force.com/lightning/r/Contact/',f.latest_mql_contact_id,'/view',f.latest_mql_contact_id) as m_mql_contact_link 
+  ,CASE WHEN most_recent_position_posted >= first_activity_date THEN account_id END as m_position_posted 
+  ,CASE WHEN sal_date >= first_activity_date THEN account_id END as m_sal 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SAL,'/view',f.SAL) as m_sal_link 
+  ,CONCAT('https://hired.my.salesforce.com/',SAL,'?srPos=0&srKp=001',SAL_name) as m_sal_link_classic 
+  ,CASE WHEN sqo_date >= first_activity_date THEN account_id END as m_sqo 
+  ,concat('https://hired.lightning.force.com/lightning/r/Opportunity/',f.SQO,'/view',f.SQO) as m_sqo_link
+  ,CASE WHEN (date_diff(date(activity_date),date(sal_date),DAY) <0 OR sal_date IS NULL) THEN TRUE ELSE FALSE END  m_task_before_sal
+  ,EXTRACT(DAYOFWEEK FROM first_activity_date) AS m_weekday_first_activity 
+  ,CASE 
+    WHEN EXISTS (
+      SELECT 1
+      FROM `hired-393411.Hired.engagement_events` e
+      WHERE e.account_id = f.account_id
+        AND e.event_type IN ('Call', 'Email', 'LinkedIn')
+        AND e.event_date >= '2023-07-01'
+    ) THEN 'worked_accounts'
+    ELSE 'new_accounts'
+  END AS account_status_1
+FROM FINAL f
+    );
+  
+[0m20:35:34.637832 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=hired-393411&j=bq:US:aad271af-9d00-4c85-a816-1e56708cf933&page=queryresults
+[0m20:35:59.568875 [debug] [Thread-1 (]: Timing info for model.hired_dw.ob_tactical_metrics (execute): 20:35:33.278985 => 20:35:59.568384
+[0m20:35:59.571527 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0b4d0656-627c-463f-b0ef-ad3fe051611c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x144b6fd60>]}
+[0m20:35:59.572718 [info ] [Thread-1 (]: 1 of 1 OK created sql table model Hired.ob_tactical_metrics .................... [[32mCREATE TABLE (145.3k rows, 196.2 MiB processed)[0m in 26.31s]
+[0m20:35:59.573527 [debug] [Thread-1 (]: Finished running node model.hired_dw.ob_tactical_metrics
+[0m20:35:59.576115 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:35:59.576570 [debug] [MainThread]: Connection 'model.hired_dw.ob_tactical_metrics' was properly closed.
+[0m20:35:59.576937 [info ] [MainThread]: 
+[0m20:35:59.577337 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 27.81 seconds (27.81s).
+[0m20:35:59.578163 [debug] [MainThread]: Command end result
+[0m20:35:59.589247 [info ] [MainThread]: 
+[0m20:35:59.589665 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:35:59.589948 [info ] [MainThread]: 
+[0m20:35:59.590258 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:35:59.591005 [debug] [MainThread]: Command `dbt build` succeeded at 20:35:59.590912 after 29.69 seconds
+[0m20:35:59.591374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c0c5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1448af3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1448c67a0>]}
+[0m20:35:59.591710 [debug] [MainThread]: Flushing usage events
