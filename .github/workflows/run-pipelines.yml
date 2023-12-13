@@ -44,3 +44,10 @@ jobs:
                 SF_TOKEN: ${{ secrets.SF_TOKEN }}
               run: |
                     python src/salesforce.py
+
+            - name: Run DBT
+              working-directory: ./fast_dw
+              env:
+                GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+              run: |
+                    dbt run
