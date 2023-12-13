@@ -41,11 +41,13 @@ jobs:
             - name: 'dbt test'
               working-directory: ./fast_dw
               env:
-                    GOOGLE_APPLICATION_CREDENTIALS: ${{ vars.GOOGLE_APPLICATION_CREDENTIALS }}
+                    GOOGLE_APPLICATION_CREDENTIALS: ./dbt-service-account.json'
                     DBT_PROFILES_DIR: ./
                     DBT_PROJECT_DIR: ./
               run: |-
                     ls
+                    echo $GOOGLE_APPLICATION_CREDENTIALS
+                    
                     dbt deps --target dev
                     dbt build --target dev --full-refresh --no-version-check
 
