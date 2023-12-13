@@ -37,12 +37,11 @@ jobs:
               run: 'echo "$KEYFILE" > ./dbt-service-account.json'
               shell: bash
               env:
-                KEYFILE: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-
+                KEYFILE: ${{ vars.GOOGLE_APPLICATION_CREDENTIALS }}
             - name: 'dbt test'
               working-directory: ./fast_dw
               env:
-                    GOOGLE_APPLICATION_CREDENTIALS: ./dbt-service-account.json
+                    GOOGLE_APPLICATION_CREDENTIALS: ${{ vars.GOOGLE_APPLICATION_CREDENTIALS }}
                     DBT_PROFILES_DIR: ./
                     DBT_PROJECT_DIR: ./
               run: |-
