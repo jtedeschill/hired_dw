@@ -6,7 +6,7 @@ on:
             - main
 jobs:
     run-pipeline:
-        name: Run Pipeline
+        name: DBT Build Test
         runs-on: ubuntu-latest
         permissions:
             id-token: write
