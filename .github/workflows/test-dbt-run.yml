@@ -43,6 +43,6 @@ jobs:
               env:
                 GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
               run: |-
-                    dbt run --profiles-dir . --project-dir . --target dev
+                    dbt run
 
 
