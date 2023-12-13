@@ -32,13 +32,6 @@ jobs:
                 create_credentials_file: true
                 access_token_lifetime: '300s'
 
-            - name: Set up gcloud Cloud SDK environment
-              uses: google-github-actions/setup-gcloud@v1.1.1
-
-            - name: 'gcloud test'
-              run: |-
-                gcloud services list
-                
             - name: Authenticate using service account
               working-directory: ./fast_dw
               run: 'echo "$KEYFILE" > ./dbt-service-account.json'
@@ -49,10 +42,12 @@ jobs:
             - name: 'dbt test'
               working-directory: ./fast_dw
               env:
-                GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+                    GOOGLE_APPLICATION_CREDENTIALS: ./dbt-service-account.json
+                    DBT_PROFILES_DIR: ./fast_dw
+                    DBT_PROJECT_DIR: ./fast_dw
               run: |-
                     ls
                     dbt deps --target dev
-                    dbt build --target dev --profiles-dir . --project-dir . --full-refresh --no-version-check
+                    dbt build --target dev --profiles-dir . --project-dir . --full-refresh --no-version-check --warn-error
 
 
