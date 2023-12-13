@@ -48,6 +48,6 @@ jobs:
               run: |-
                     ls
                     dbt deps --target dev
-                    dbt build --target dev
+                    dbt build --target dev --full-refresh --no-version-check
 
 
