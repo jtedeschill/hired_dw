@@ -43,8 +43,8 @@ jobs:
               working-directory: ./fast_dw
               env:
                     GOOGLE_APPLICATION_CREDENTIALS: ./dbt-service-account.json
-                    DBT_PROFILES_DIR: ./fast_dw
-                    DBT_PROJECT_DIR: ./fast_dw
+                    DBT_PROFILES_DIR: ./
+                    DBT_PROJECT_DIR: ./
               run: |-
                     ls
                     dbt deps --target dev
