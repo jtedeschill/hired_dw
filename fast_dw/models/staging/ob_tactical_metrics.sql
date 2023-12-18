@@ -1,6 +1,5 @@
 {{ config(materialized='table') }}
 
-
 WITH
   Latest_MQL_Date AS (
   SELECT
