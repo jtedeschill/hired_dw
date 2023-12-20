@@ -42,7 +42,7 @@ jobs:
             - name: 'dbt test'
               working-directory: ./fast_dw
               env:
-                    GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path}}
+                    GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
                     DBT_PROFILES_DIR: ./
                     DBT_PROJECT_DIR: ./
               run: |-
