@@ -10,4 +10,4 @@ hired_dw:
       timeout_seconds: 300
       location: US
       priority: interactive
-      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      keyfile: ./creds.json

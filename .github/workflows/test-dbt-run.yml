@@ -39,17 +39,9 @@ jobs:
               env:
                 KEYFILE: ${{ steps.auth.outputs.credentials_file }}
                 
-            - name: 'dbt test'
-              working-directory: ./fast_dw
+            - name: dbt-action
+              uses: mwhitaker/dbt-action@master
+              with:
+                dbt_command: "dbt run --profiles-dir ."
               env:
-                    GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file }}
-                    DBT_PROFILES_DIR: ./
-                    DBT_PROJECT_DIR: ./
-              run: |-
-                    ls
-                    echo $GOOGLE_APPLICATION_CREDENTIALS
-                    
-                    dbt deps --target dev
-                    dbt build --target dev --full-refresh --no-version-check
-
-
+                  DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file }}
