@@ -44,8 +44,9 @@ jobs:
               env:
                     GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
                     PROJECT_ID: ${{ secrets.PROJECT_ID }}
-                    DBT_PROFILES_DIR: ./profiles.yml
-                    DBT_PROJECT_DIR: ./dbt_project.yml
+                    # get current directory
+                    DBT_PROFILES_DIR:  ${{ github.workspace }}
+                    DBT_PROJECT_DIR: ${{ github.workspace }}
               run: |-
                     dbt build --target dev --full-refresh --no-version-check
 
