@@ -45,8 +45,8 @@ jobs:
                     GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
                     PROJECT_ID: ${{ secrets.PROJECT_ID }}
                     # get current directory
-                    DBT_PROFILES_DIR:  ${{ github.workspace }} + '/fast_dw'
-                    DBT_PROJECT_DIR: ${{ github.workspace }} + '/fast_dw'
+                    DBT_PROFILES_DIR:  ${{ github.workspace }}/fast_dw
+                    DBT_PROJECT_DIR: ${{ github.workspace }}/fast_dw
               run: |-
                     dbt build --target dev --full-refresh --no-version-check
 
