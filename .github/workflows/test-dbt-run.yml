@@ -43,5 +43,6 @@ jobs:
               uses: mwhitaker/dbt-action@master
               with:
                 dbt_command: "dbt run --profiles-dir ."
+                dbt_project_folder: "fast_dw"
               env:
                   DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file }}
