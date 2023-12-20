@@ -22,5 +22,6 @@
 "Sub_Industry__c": ["string", "sub_industry_clearbit"],
 "Most_Recent_IVR__c": ["date", "most_recent_ivr"],
 "Most_Recent_Position_Posted__c": ["date", "most_recent_position_posted"],
-"Careers_Page_Link__c": ["string", "careers_page_link"]
+"Careers_Page_Link__c": ["string", "careers_page_link"],
+"Job_Scraping_Type__c": ["string", "job_scraping_type"]
 }

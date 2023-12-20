@@ -23,6 +23,7 @@ SELECT
   Sub_Industry__c,
   Most_Recent_IVR__c,
   Most_Recent_Position_Posted__c,
-  Careers_Page_Link__c
+  Careers_Page_Link__c,
+  Job_Scraping_Type__c
   
 FROM ACCOUNT
