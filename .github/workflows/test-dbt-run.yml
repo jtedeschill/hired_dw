@@ -37,7 +37,7 @@ jobs:
               run: 'echo "$KEYFILE" > ./dbt-service-account.json'
               shell: bash
               env:
-                KEYFILE: ${{ steps.auth.outputs.credentials_file }}
+                KEYFILE: ${{ steps.auth.outputs.credentials_file_path }}
                 
             - name: dbt-action
               uses: mwhitaker/dbt-action@master
@@ -45,4 +45,4 @@ jobs:
                 dbt_command: "dbt run --profiles-dir ."
                 dbt_project_folder: "fast_dw"
               env:
-                  DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file }}
+                  DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file_path}}
