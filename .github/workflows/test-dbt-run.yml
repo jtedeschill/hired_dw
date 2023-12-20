@@ -43,8 +43,7 @@ jobs:
               working-directory: ./fast_dw
               env:
                     GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-                    DBT_PROFILES_DIR: ./fast_dw
-                    DBT_PROJECT_DIR: ./fast_dw
+                    PROJECT_ID: ${{ secrets.PROJECT_ID }}
               run: |-
                     dbt build --target dev --full-refresh --no-version-check
 
