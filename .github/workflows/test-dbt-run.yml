@@ -37,13 +37,19 @@ jobs:
               run: 'echo "$KEYFILE" > ./dbt-service-account.json'
               shell: bash
               env:
-                KEYFILE: ${{ steps.auth.outputs.credentials_file_path }}
+                KEYFILE: ${{ steps.vars.outputs.GOOGLE_APPLICATION_CREDENTIALS }}
                 
-            - name: dbt-action
-              uses: mwhitaker/dbt-action@master
-              with:
-                dbt_command: "dbt run --profiles-dir ."
-                dbt_project_folder: "fast_dw"
+            - name: 'dbt test'
+              working-directory: ./fast_dw
               env:
-                  DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file_path}}
-                  GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path}}
+                    GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path}}
+                    DBT_PROFILES_DIR: ./
+                    DBT_PROJECT_DIR: ./
+              run: |-
+                    ls
+                    echo $GOOGLE_APPLICATION_CREDENTIALS
+                    
+                    dbt deps --target dev
+                    dbt build --target dev --full-refresh --no-version-check
+
+
