@@ -42,7 +42,6 @@ jobs:
             - name: 'dbt test'
               working-directory: ./fast_dw
               env:
-                    GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path}}
                     PROJECT_ID: ${{ secrets.PROJECT_ID }}
                     # get current directory
                     DBT_PROFILES_DIR:  ${{ github.workspace }}/fast_dw
