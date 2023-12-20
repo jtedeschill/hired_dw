@@ -46,10 +46,6 @@ jobs:
                     DBT_PROFILES_DIR: ./
                     DBT_PROJECT_DIR: ./
               run: |-
-                    ls
-                    echo $GOOGLE_APPLICATION_CREDENTIALS
-                    
-                    dbt deps --target dev
                     dbt build --target dev --full-refresh --no-version-check
 
 
