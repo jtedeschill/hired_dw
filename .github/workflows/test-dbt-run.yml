@@ -46,3 +46,4 @@ jobs:
                 dbt_project_folder: "fast_dw"
               env:
                   DBT_BIGQUERY_TOKEN:: ${{ steps.auth.outputs.credentials_file_path}}
+                  GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path}}
