@@ -34,7 +34,11 @@ Original_UTM_Medium__c,
 utm_content__c, 
 Original_UTM_Content__c, 
 UTM_Description__c, 
-Original_UTM_Description__c
+Original_UTM_Description__c,
+Phone,
+Left_or_inactive__c,
+HasOptedOutOfEmail,
+OutReach_OptOut__c
 
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
