@@ -23,5 +23,10 @@
 "Most_Recent_IVR__c": ["date", "most_recent_ivr"],
 "Most_Recent_Position_Posted__c": ["date", "most_recent_position_posted"],
 "Careers_Page_Link__c": ["string", "careers_page_link"],
-"Job_Scraping_Type__c": ["string", "job_scraping_type"]
+"Job_Scraping_Type__c": ["string", "job_scraping_type"],
+"Description_of_Roles__c": ["string", "description_of_roles"],
+"Most_Recent_Platform_Service_Contract__c": ["string", "most_recent_platform_service_contract"],
+"Most_Recent_Service_Contract_Plan_Type__c": ["string", "most_recent_service_contract_plan_type"],
+"Last_Inbound_Email_Sent__c": ["date", "last_inbound_email_sent"],
+"Last_Outbound_Email_Sent__c": ["date", "last_outbound_email_sent"]
 }
