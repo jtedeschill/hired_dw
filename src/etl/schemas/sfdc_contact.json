@@ -145,18 +145,18 @@
     ],
     "Phone": [
         "string",
-        "original_utm_description"
+        "phone"
     ],
     "Left_or_inactive__c": [
         "bool",
-        "original_utm_description"
+        "left_or_inactive"
     ],
     "HasOptedOutOfEmail": [
         "bool",
-        "original_utm_description"
+        "has_opted_out_of_email"
     ],
     "OutReach_OptOut__c": [
         "bool",
-        "original_utm_description"
+        "outreach_opted_out"
     ]
 }
