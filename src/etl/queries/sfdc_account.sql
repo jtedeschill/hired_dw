@@ -24,6 +24,11 @@ SELECT
   Most_Recent_IVR__c,
   Most_Recent_Position_Posted__c,
   Careers_Page_Link__c,
-  Job_Scraping_Type__c
+  Job_Scraping_Type__c,
+  Description_of_Roles__c,
+  Most_Recent_Platform_Service_Contract__c,
+  Most_Recent_Service_Contract_Plan_Type__c,
+  Last_Inbound_Email_Sent__c,
+  Last_Outbound_Email_Sent__c
   
 FROM ACCOUNT
