@@ -148,15 +148,15 @@
         "original_utm_description"
     ],
     "Left_or_inactive__c": [
-        "string",
+        "bool",
         "original_utm_description"
     ],
     "HasOptedOutOfEmail": [
-        "string",
+        "bool",
         "original_utm_description"
     ],
     "OutReach_OptOut__c": [
-        "string",
+        "bool",
         "original_utm_description"
     ]
 }
