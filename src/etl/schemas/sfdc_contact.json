@@ -142,5 +142,21 @@
     "Original_UTM_Description__c": [
         "string",
         "original_utm_description"
+    ],
+    "Phone": [
+        "string",
+        "original_utm_description"
+    ],
+    "Left_or_inactive__c": [
+        "string",
+        "original_utm_description"
+    ],
+    "HasOptedOutOfEmail": [
+        "string",
+        "original_utm_description"
+    ],
+    "OutReach_OptOut__c": [
+        "string",
+        "original_utm_description"
     ]
 }
