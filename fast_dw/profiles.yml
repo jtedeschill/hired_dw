@@ -3,11 +3,12 @@ hired_dw:
   outputs:
     dev:
       type: bigquery
-      method: service-account
+      method: oauth-secrets
+      token: "{{ env_var('DBT_TOKEN') }}"
       project: "{{ env_var('PROJECT_ID') }}" # Replace this with your project id
       dataset: Hired # Replace this with dbt_your_name, e.g. dbt_bob
       threads: 4
       timeout_seconds: 300
       location: US
       priority: interactive
-      keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"
+      # keyfile: "{{ env_var('GOOGLE_APPLICATION_CREDENTIALS') }}"

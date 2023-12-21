@@ -30,6 +30,7 @@ jobs:
                 workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
                 service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
                 create_credentials_file: true
+                token_format: 'access_token'
                 access_token_lifetime: '300s'
 
             - name: Set up gcloud Cloud SDK environment
@@ -46,6 +47,7 @@ jobs:
                     # get current directory
                     DBT_PROFILES_DIR:  ${{ github.workspace }}/fast_dw
                     DBT_PROJECT_DIR: ${{ github.workspace }}/fast_dw
+                    DBT_TOKEN : ${{ steps.auth.outputs.access_token }}
               run: |-
                     dbt --log-level debug build --target dev --full-refresh --no-version-check
 
