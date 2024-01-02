@@ -44,3 +44,18 @@ jobs:
                 SF_TOKEN: ${{ secrets.SF_TOKEN }}
               run: |
                     python src/salesforce.py
+
+
+          # add a new step for dbt
+
+            - name: 'dbt test'
+            working-directory: ./fast_dw
+            env:
+                  PROJECT_ID: ${{ secrets.PROJECT_ID }}
+                  # get current directory
+                  DBT_PROFILES_DIR:  ${{ github.workspace }}/fast_dw
+                  DBT_PROJECT_DIR: ${{ github.workspace }}/fast_dw
+                  DBT_TOKEN : ${{ steps.auth.outputs.access_token }}
+            run: |-
+                  dbt --log-level debug build --target dev --full-refresh --no-version-check
+

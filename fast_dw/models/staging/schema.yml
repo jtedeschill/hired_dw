@@ -149,3 +149,56 @@ models:
       - name: m_weekday_first_activity
 
       - name: account_status_1
+
+  - name: engagement_events
+    description: "Engagement events from Hired Salesforce data"
+    columns:
+      - name: event_date
+        description: "Event date"
+
+      - name: event_type
+        description: "Event type"
+
+      - name: event_attribute
+        description: "Event attribute"
+
+      - name: event_attribute_2
+        description: "Event attribute 2"
+
+      - name: event_attribute_3
+        description: "Event attribute 3"
+
+      - name: event_attribute_4
+        description: "Event attribute 4"
+
+      - name: event_id
+        description: "Event ID"
+
+      - name: last_event_date
+        description: "Last event date"
+
+      - name: last_event_type
+        description: "Last event type"
+
+      - name: event_number
+        description: "Event number"
+
+      - name: days_since_last_event
+        description: "Days since last event"
+
+      - name: total_events
+        description: "Total events"
+
+      - name: date
+        description: "Date"
+
+      - name: lead_id
+        description: "Lead ID"
+
+      - name: account_id
+        description: "Account ID"
+
+      - name: coalesced_id
+        description: "Coalesced ID"
+
+
