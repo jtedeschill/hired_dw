@@ -28,7 +28,7 @@ jobs:
                 workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
                 service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
                 create_credentials_file: true
-                access_token_lifetime: '300s'
+                access_token_lifetime: '2400s'
                 token_format: 'access_token'
 
             - name: Set up gcloud Cloud SDK environment
