@@ -159,12 +159,54 @@
         "bool",
         "outreach_opted_out"
        ],
+    "Last_In_or_Outbound_Email__c": [
+        "string",
+        "last_In_or_outbound_email"
+    ],
+    "Last_In_Person_Meeting__c": [
+        "date",
+        "last_in_person_meeting"
+    ],
+    "Last_Inbound_Activity_Date__c": [
+        "date",
+        "last_inbound_activity_date"
+    ],
+    "Last_Inbound_Email_Sent__c": [
+        "date",
+        "last_inbound_email_sent"
+    ],
+    "Last_IVR_Date__c": [
+        "date",
+        "last_ivr_date"
+    ],
+    "Last_Login_Date__c": [
+        "date",
+        "last_login_date"
+    ],
+    "Last_Outbound_Activity_Date__c": [
+        "date",
+        "last_outbound_activity_date"
+    ],
+    "Last_Outbound_Email_Sent__c": [
+        "date",
+        "last_outbound_email_sent"
+
+     ],
+    "Last_Outbound_Email_Sent_AE__c": [
+        "date",
+        "last_outbound_email_sent_ae"
+
+     ],
+    "Last_Outbound_Email_Sent_CSM__c": [
+        "date",
+        "last_outbound_email_sent_csm"
+
+     ],
     "Date_of_First_Activity__c": [
-        "date",,
-        "date_of_airst_activity"
+        "date",
+        "date_of_first_activity"
+
     ]
-
-
 
 
     
