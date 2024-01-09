@@ -38,7 +38,18 @@ Original_UTM_Description__c,
 Phone,
 Left_or_inactive__c,
 HasOptedOutOfEmail,
-OutReach_OptOut__c
-
+OutReach_OptOut__c,
+Last_In_or_Outbound_Email__c,
+Last_In_Person_Meeting__c,
+Last_Inbound_Activity_Date__c,
+Last_Inbound_Email_Sent__c,
+Last_IVR_Date__c,
+Last_Login_Date__c,
+Last_Outbound_Activity_Date__c,
+Last_Outbound_Email_Sent__c,
+Last_Outbound_Email_Sent_AE__c,
+Last_Outbound_Email_Sent_CSM__c,
+Last_Activity_Date__c,
+Date_of_First_Activity__c
 FROM CONTACT
 WHERE RecordType.name != 'Candidate'
