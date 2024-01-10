@@ -29,6 +29,8 @@ SELECT
   Most_Recent_Platform_Service_Contract__c,
   Most_Recent_Service_Contract_Plan_Type__c,
   Last_Inbound_Email_Sent__c,
-  Last_Outbound_Email_Sent__c
+  Last_Outbound_Email_Sent__c,
+  Account_Manager_Role__c,
+  Account_Manager_Manager__c
   
 FROM ACCOUNT
