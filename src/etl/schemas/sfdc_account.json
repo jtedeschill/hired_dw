@@ -28,5 +28,7 @@
 "Most_Recent_Platform_Service_Contract__c": ["string", "most_recent_platform_service_contract"],
 "Most_Recent_Service_Contract_Plan_Type__c": ["string", "most_recent_service_contract_plan_type"],
 "Last_Inbound_Email_Sent__c": ["date", "last_inbound_email_sent"],
-"Last_Outbound_Email_Sent__c": ["date", "last_outbound_email_sent"]
+"Last_Outbound_Email_Sent__c": ["date", "last_outbound_email_sent"],
+"Account_Manager_Role__c": ["string", "account_manager_role"],
+"Account_Manager_Manager__c": ["string", "account_manager_manager"]
 }
