@@ -19,7 +19,8 @@ SQO_Date_Active__c,
 CloseDate,
 Campaign.type,
 Amount,
-Opportunity_Owner_Role__c
-
+Opportunity_Owner_Role__c,
+Sales_Reps_Forecast__c,
+Manager_Forecast__c
 FROM OPPORTUNITY
 WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c = NULL)
