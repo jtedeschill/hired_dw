@@ -82,7 +82,19 @@
     "Opportunity_Owner_Role__c": [
        "string",
         "opportunity_owner_role"
+    ],
+    "Sales_Reps_Forecast__c": [
+       "string",
+        "sales_reps_forecast"
+    ],
+    "Manager_Forecast__c": [
+       "string",
+        "manager_forecast"
     ]
+
+
+
+    
 
     
 }
