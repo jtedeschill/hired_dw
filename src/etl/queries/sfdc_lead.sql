@@ -39,7 +39,6 @@ No_Longer_at_Company__c,
 Left_or_inactive__c,
 HasOptedOutOfEmail,
 OutReach_OptOut__c
-
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
 AND ConvertedContact.Id = NULL
