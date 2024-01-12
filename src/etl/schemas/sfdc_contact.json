@@ -206,6 +206,10 @@
         "date",
         "date_of_first_activity"
 
+    ],
+    "Campaign_Type__c": [
+        "string",
+        "campaign_type"
     ]
 
 
