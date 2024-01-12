@@ -49,6 +49,7 @@ Last_Outbound_Activity_Date__c,
 Last_Outbound_Email_Sent__c,
 Last_Outbound_Email_Sent_AE__c,
 Last_Outbound_Email_Sent_CSM__c,
-Date_of_First_Activity__c
+Date_of_First_Activity__c,
+Campaign_Type__c
 FROM CONTACT
 WHERE RecordType.name != 'Candidate' 
