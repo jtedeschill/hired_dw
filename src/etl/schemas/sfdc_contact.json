@@ -210,10 +210,17 @@
     "Campaign_Type__c": [
         "string",
         "campaign_type"
+    ],
+    "MQL__c": [
+        "string",
+        "mql"
+    ],
+    "MQL_Date__c": [
+        "string",
+        "mql_date"
     ]
 
 
-    
 
 
 
