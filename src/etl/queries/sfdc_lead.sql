@@ -26,7 +26,19 @@ Original_UTM_Medium__c,
 UTM_Content__c, 
 Original_UTM_Content__c, 
 UTM_Description__c, 
-Original_UTM_Description__c
+Original_UTM_Description__c,
+Campaign_Type__c,
+FirstName,
+LastName,
+Email,
+Date_of_First_Activity__c, 
+LastActivityDate,
+Last_Inbound_Email_Sent__c,
+Last_Outbound_Email_Sent__c,
+No_Longer_at_Company__c,
+Left_or_inactive__c,
+HasOptedOutOfEmail,
+OutReach_OptOut__c
 
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
