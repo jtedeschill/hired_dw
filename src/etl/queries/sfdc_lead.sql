@@ -41,7 +41,9 @@ HasOptedOutOfEmail,
 OutReach_OptOut__c,
 Company,
 Title,
-Phone
+Phone,
+MQL__c,
+MQL_Date__c
 FROM Lead
 WHERE (type__c != 'Job Seeker' OR type__c = NULL)
 AND ConvertedContact.Id = NULL
