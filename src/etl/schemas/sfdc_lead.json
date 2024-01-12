@@ -110,5 +110,62 @@
     "Original_UTM_Description__c": [
         "string",
         "original_utm_description"
+    ],
+    "Campaign_Type__c": [
+        "string",
+        "campaign_type"
+    ],
+    "FirstName": [
+        "string",
+        "first_name"
+    ],
+    "LastName": [
+        "string",
+        "last_name"
+    ],
+    "Email": [
+        "string",
+        "email"
+    ],
+    "Date_of_First_Activity__c": [
+        "date",
+        "first_activity_date"
+    ],
+    "LastActivityDate": [
+        "date",
+        "last_activity_date"
+    ],
+    "Last_Inbound_Email_Sent__c": [
+        "date",
+        "last_inbound_email_sent"
+    ],
+    "Last_Outbound_Email_Sent__c": [
+        "date",
+        "last_outbound_email_sent"
+    ],
+    "No_Longer_at_Company__c": [
+        "string",
+        "no_longer_at_company"
+    ],
+    "Left_or_inactive__c": [
+        "string",
+        "left_or_inactive"
+    ],
+    "HasOptedOutOfEmail": [
+        "string",
+        "has_opted_out_of_email"
+    ],
+    "OutReach_OptOut__c": [
+        "string",
+        "outreach_optout"
     ]
+
+
+
+
+
+
+
+
+    
 }
