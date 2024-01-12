@@ -170,6 +170,14 @@
     "Phone": [
         "string",
         "phone"
+    ],
+    "MQL__c": [
+        "string",
+        "mql"
+    ],
+    "MQL_Date__c": [
+        "string",
+        "mql_date"
     ]
 
 
