@@ -158,8 +158,19 @@
     "OutReach_OptOut__c": [
         "string",
         "outreach_optout"
+    ],
+    "Company": [
+        "string",
+        "company"
+    ],
+    "Title": [
+        "string",
+        "title"
+    ],
+    "Phone": [
+        "string",
+        "phone"
     ]
-
 
 
 
