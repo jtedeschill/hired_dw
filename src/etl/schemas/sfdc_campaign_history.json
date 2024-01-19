@@ -62,5 +62,11 @@
     "FCRM__FCR_Inquiry_Target__c": [
         "bool",
         "inquiry"
+    ],
+    "Account_ID__c": [
+        "string",
+        "account_id"
     ]
+
+
 }
