@@ -47,8 +47,8 @@ lc as (
   select 
   distinct
   lead_id,
-  account_id,
-  coalesce(lead_id,account_id) as coalesced_id,
+  c.account_id,
+  coalesce(lead_id,c.account_id) as coalesced_id,
   lead_created_date as event_date,
   "Lead Created" as event_type,
   contact_id as event_attribute,
