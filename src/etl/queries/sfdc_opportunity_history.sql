@@ -8,4 +8,4 @@ NewValue,
 OldValue
 
 FROM OpportunityFieldHistory
-WHERE Field IN ('StageName', 'CloseDate','Amount')
+WHERE Field IN ('StageName', 'CloseDate','Amount','created')
