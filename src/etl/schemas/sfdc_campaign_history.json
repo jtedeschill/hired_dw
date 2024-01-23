@@ -66,7 +66,13 @@
     "Account_ID__c": [
         "string",
         "account_id"
+    ],
+    "LastModifiedById": [
+        "string",
+        "lastmodifiedbyid"
+    ],
+    "LastModifiedBy.Name": [
+        "string",
+        "lastmodifiedbyname"
     ]
-
-
 }
