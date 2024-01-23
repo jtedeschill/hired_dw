@@ -71,7 +71,7 @@
         "string",
         "lastmodifiedbyid"
     ],
-    "LastModifiedBy.Name": [
+    "LastModifiedBy_Name": [
         "string",
         "lastmodifiedbyname"
     ]
