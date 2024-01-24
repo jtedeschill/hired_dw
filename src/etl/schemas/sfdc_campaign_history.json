@@ -51,7 +51,7 @@
         "string",
         "status"
     ],
-    "FCRM__FCR_Last_Modified_By_Formula__c": [
+    "LastModifiedBy_Name": [
         "string",
         "campaign_last_modified_by"
     ],
@@ -70,9 +70,5 @@
     "LastModifiedById": [
         "string",
         "lastmodifiedbyid"
-    ],
-    "LastModifiedBy_Name": [
-        "string",
-        "lastmodifiedbyname"
     ]
 }
