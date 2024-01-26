@@ -21,5 +21,4 @@ AND owner.name != 'Marketo Sync'
 AND (owner.userrole.name LIKE '%AE%'
     OR owner.userrole.name LIKE '%BDR%'
     OR owner.userrole.name LIKE '%SDR%'
-    OR owner.userrole.name LIKE '%SMB%')                                  )
-
+    OR owner.userrole.name LIKE '%SMB%')
