@@ -15,11 +15,11 @@
         "date",
         "created_Date"
     ],
-    "FCRM__FCR_QR_Date__c": [
+    "CM_MQL_Date__c": [
         "date",
         "mql_date"
     ],
-    "FCRM__FCR_QR__c": [
+    "CM_MQL__c": [
         "bool",
         "mql"
     ],
@@ -39,10 +39,6 @@
         "string",
         "mql_owner"
     ],
-    "FCRM__FCR_First_Owner_Worked__c": [
-        "string",
-        "first_owner_worked"
-    ],
     "Campaign_Intent_Type__c": [
         "string",
         "intent_type"
@@ -55,11 +51,11 @@
         "string",
         "campaign_last_modified_by"
     ],
-    "FCRM__FCR_Last_Modified_By_Date_Formula__c": [
+    "LastModifiedDate": [
         "date",
         "campaign_last_modified_date"
     ],
-    "FCRM__FCR_Inquiry_Target__c": [
+    "HasResponded": [
         "bool",
         "inquiry"
     ],
