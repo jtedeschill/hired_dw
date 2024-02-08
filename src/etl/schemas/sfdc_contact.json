@@ -83,7 +83,7 @@
         "string",
         "how_did_you_hear_about_us_reasons"
     ],
-    "FCRM__FCR_Status__c": [
+    "Contact_Status__c": [
         "string",
         "contact_status"
     ],
