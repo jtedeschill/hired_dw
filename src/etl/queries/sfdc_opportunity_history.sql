@@ -5,6 +5,7 @@ CreatedDate,
 CreatedById,
 Field,
 NewValue,
-OldValue
+OldValue,
+CreatedBy.Name
 FROM OpportunityFieldHistory
 WHERE Field IN ('StageName', 'CloseDate','Amount','created','Created by lead convert','opportunityCreatedFromLead')
