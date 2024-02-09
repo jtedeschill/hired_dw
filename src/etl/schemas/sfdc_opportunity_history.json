@@ -26,5 +26,9 @@
     "OpportunityId": [
         "string",
         "opportunity_id"
-    ]
+    ],
+    "CreatedBy_Name": [
+        "string",
+        "user"
+    ]    
 }
