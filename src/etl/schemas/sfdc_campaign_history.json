@@ -66,5 +66,25 @@
     "LastModifiedById": [
         "string",
         "lastmodifiedbyid"
+    ],
+    "UTM_Campaign__c": [
+        "string",
+        "utm_campaign"
+    ],
+    "UTM_Content__c": [
+        "string",
+        "utm_content"
+    ],
+    "UTM_Source__c": [
+        "string",
+        "utm_source"
+    ],
+    "UTM_Description__c": [
+        "string",
+        "utm_description"
+    ],
+    "UTM_Medium__c": [
+        "string",
+        "utm_medium"
     ]
 }
