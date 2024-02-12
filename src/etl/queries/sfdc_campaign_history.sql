@@ -15,7 +15,12 @@ LastModifiedDate,
 HasResponded,
 Account_ID__c,
 LastModifiedBy.Name,  
-LastModifiedById
+LastModifiedById,
+UTM_Campaign__c, 
+UTM_Content__c, 
+UTM_Source__c, 
+UTM_Description__c, 
+UTM_Medium__c
 FROM campaignmember
 WHERE (Contact.RecordType.Name != 'Candidate' OR Contact.RecordType.Name = null)
 AND (Lead.type__c != 'Job Seeker' OR Lead.type__c = null)
