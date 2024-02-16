@@ -21,6 +21,11 @@ Campaign.type,
 Amount,
 Opportunity_Owner_Role__c,
 Sales_Reps_Forecast__c,
-Manager_Forecast__c
+Manager_Forecast__c,
+UTM_Campaign__c,
+UTM_Content__c,
+UTM_Medium__c,
+UTM_Source__c,
+UTM_Term__c
 FROM OPPORTUNITY
 WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c = NULL)
