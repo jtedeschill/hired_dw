@@ -90,11 +90,25 @@
     "Manager_Forecast__c": [
        "string",
         "manager_forecast"
+    ],
+    "UTM_Campaign__c": [
+       "string",
+        "utm_campaign"
+    ],
+    "UTM_Content__c": [
+       "string",
+        "utm_content"
+    ],
+    "UTM_Medium__c": [
+       "string",
+        "utm_medium"
+    ],
+    "UTM_Source__c": [
+       "string",
+        "utm_source"
+    ],
+    "UTM_Term__c": [
+       "string",
+        "utm_term"
     ]
-
-
-
-    
-
-    
 }
