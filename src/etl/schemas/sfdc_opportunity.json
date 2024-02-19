@@ -90,5 +90,14 @@
     "Manager_Forecast__c": [
        "string",
         "manager_forecast"
+    ],
+    "Campaign_Campaign_ID__c": [
+       "string",
+        "campaign_id"
     ]
+
+
+
+
+    
 }
