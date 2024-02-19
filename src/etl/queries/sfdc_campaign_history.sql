@@ -20,7 +20,8 @@ UTM_Campaign__c,
 UTM_Content__c, 
 UTM_Source__c, 
 UTM_Description__c, 
-UTM_Medium__c
+UTM_Medium__c,
+CampaignId 
 FROM campaignmember
 WHERE (Contact.RecordType.Name != 'Candidate' OR Contact.RecordType.Name = null)
 AND (Lead.type__c != 'Job Seeker' OR Lead.type__c = null)
