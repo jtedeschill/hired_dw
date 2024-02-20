@@ -94,10 +94,9 @@
     "Campaign_Campaign_ID__c": [
        "string",
         "campaign_id"
+    ],
+    "Campaign_Name": [
+       "string",
+        "campaign_name"
     ]
-
-
-
-
-    
 }
