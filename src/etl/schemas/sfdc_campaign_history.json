@@ -86,9 +86,5 @@
     "UTM_Medium__c": [
         "string",
         "utm_medium"
-    ],
-    "CampaignId ": [
-        "string",
-        "campaign_id"
-    ]   
+    ] 
 }
