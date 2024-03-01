@@ -98,5 +98,9 @@
     "Campaign_Name": [
        "string",
         "campaign_name"
-    ]
+    ],
+    "IsWon": [
+        "bool",
+        "won_checkbox"
+    ]    
 }
