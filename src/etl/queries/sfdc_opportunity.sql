@@ -23,6 +23,7 @@ Opportunity_Owner_Role__c,
 Sales_Reps_Forecast__c,
 Manager_Forecast__c,
 Campaign.Campaign_ID__c,
-Campaign.Name
+Campaign.Name,
+IsWon
 FROM OPPORTUNITY
 WHERE (Deal_Type__c != 'Trial' OR Deal_Type__c = NULL)
