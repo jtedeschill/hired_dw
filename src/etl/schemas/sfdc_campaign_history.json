@@ -15,11 +15,11 @@
         "date",
         "created_Date"
     ],
-    "CM_SQL_Date__c": [
+    "fcrm__fcr_sqr_date__c,": [
         "date",
         "mql_date"
     ],
-    "CM_SQL__c": [
+    "fcrm__fcr_sqr__c": [
         "bool",
         "mql"
     ],
