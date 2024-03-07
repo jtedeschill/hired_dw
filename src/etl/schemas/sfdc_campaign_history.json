@@ -127,7 +127,7 @@
         "string",
         "contact_country"
     ],
-        "lead_Country": [
+        "Lead_Country": [
         "string",
         "lead_country"
     ],
@@ -183,15 +183,15 @@
         "string",
         "fcrm__fcr_opportunity"
     ],
-    "FCRM__FCR_Opportunity__r_id": [
+    "FCRM__FCR_Opportunity_r_id": [
         "string",
         "fcrm__fcr_opportunity_id"
     ],
-    "FCRM__FCR_Opportunity__r_IsWon": [
+    "FCRM__FCR_Opportunity_r_IsWon": [
         "bool",
         "fcrm__fcr_opportunity_iswon"
     ],
-    "FCRM__FCR_Opportunity__r_Won_ACV__c": [
+    "FCRM__FCR_Opportunity_r_Won_ACV__c": [
         "float64",
         "fcrm__fcr_opportunity_won_acv"
     ]
