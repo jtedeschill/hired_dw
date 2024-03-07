@@ -45,10 +45,7 @@ FCRM__FCR_Reactivation_Date__c,
 MQL_SQL_SAL_Tie_Out__c, 
 FCRM__FCR_Opportunity_Count__c, 
 SQO_Date_From_Opp__c, 
-FCRM__FCR_Opportunity__c,
-FCRM__FCR_Opportunity__r.id,
-FCRM__FCR_Opportunity__r.IsWon,
-FCRM__FCR_Opportunity__r.Won_ACV__c
+FCRM__FCR_Opportunity__c
 FROM campaignmember
 WHERE (Contact.RecordType.Name != 'Candidate' OR Contact.RecordType.Name = null)
 AND (Lead.type__c != 'Job Seeker' OR Lead.type__c = null) 
