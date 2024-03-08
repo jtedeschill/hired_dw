@@ -31,6 +31,7 @@ SELECT
   Last_Inbound_Email_Sent__c,
   Last_Outbound_Email_Sent__c,
   Account_Manager_Role__c,
-  Account_Manager_Manager__c
-  
+  Account_Manager_Manager__c,
+  Date_of_Churn__c,
+  Do_Not_Contact_Reason__c
 FROM ACCOUNT
