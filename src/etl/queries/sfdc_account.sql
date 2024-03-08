@@ -33,5 +33,6 @@ SELECT
   Account_Manager_Role__c,
   Account_Manager_Manager__c,
   Date_of_Churn__c,
-  Do_Not_Contact_Reason__c
+  Do_Not_Contact_Reason__c,
+  Suspension_Date__c
 FROM ACCOUNT
