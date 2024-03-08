@@ -30,5 +30,7 @@
 "Last_Inbound_Email_Sent__c": ["date", "last_inbound_email_sent"],
 "Last_Outbound_Email_Sent__c": ["date", "last_outbound_email_sent"],
 "Account_Manager_Role__c": ["string", "account_manager_role"],
-"Account_Manager_Manager__c": ["string", "account_manager_manager"]
+"Account_Manager_Manager__c": ["string", "account_manager_manager"],
+"Date_of_Churn__c":["date", "churn_date"],
+"Do_Not_Contact_Reason__c":["string", "do_not_contact_reason"]
 }
